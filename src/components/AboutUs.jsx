@@ -4,8 +4,8 @@ import "./AboutUs.css";
 /* FIRST SET */
 import roof from "../assets/house-parts/desk1.webp";
 import wallLeft from "../assets/house-parts/Layer-3.webp";
-import wallRight from "../assets/house-parts/layer-7.webp";
-import floor from "../assets/house-parts/layer-10.webp";
+import wallRight from "../assets/house-parts/Layer-7.webp";
+import floor from "../assets/house-parts/Layer-10.webp";
 import sofa from "../assets/house-parts/sofa.webp";
 import plant from "../assets/house-parts/plant.webp";
 import plant2 from "../assets/house-parts/plant 1.webp";
@@ -19,8 +19,8 @@ import rug from "../assets/house-parts/Layer-9.webp";
 /* SECOND SET */
 import roof2 from "../assets/house-parts/desk1.webp";
 import wallLeft2 from "../assets/house-parts/Layer-3.webp";
-import wallRight2 from "../assets/house-parts/layer-7.webp";
-import floor2 from "../assets/house-parts/layer-10.webp";
+import wallRight2 from "../assets/house-parts/Layer-7.webp";
+import floor2 from "../assets/house-parts/Layer-10.webp";
 import sofa2 from "../assets/house-parts/sofa.webp";
 import plant3 from "../assets/house-parts/plant.webp";
 import plant4 from "../assets/house-parts/plant 1.webp";
