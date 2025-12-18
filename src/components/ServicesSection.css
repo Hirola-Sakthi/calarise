@@ -1,0 +1,198 @@
+/* Global box-sizing to avoid overflow issues */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.services-section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: #101010;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+
+/* Soft dark pattern overlay */
+.services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 42px;
+  color: #f5f0e9;
+  margin-bottom: 80px;
+  margin-top: 30px;
+}
+
+.service-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;      /* start exactly from bottom */
+  left: 0;
+  width: 100%;
+  height: 120px;   /* adjust how tall the black area should be */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,   /* very dark at bottom */
+    rgba(0, 0, 0, 0.55) 40%,  /* soften */
+    rgba(0, 0, 0, 0) 100%     /* fully transparent above */
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.services-swiper-wrap {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* TOP curve */
+.services-swiper-wrap::before {
+  content: "";
+  position: absolute;
+  top: -20px;          /* reduced */
+  left: 0;
+  width: 100%;
+  height: 36px;        /* reduced */
+  background: #101010;
+  border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+  z-index: 5;
+}
+
+.services-swiper-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;       /* reduced */
+  left: 0;
+  width: 100%;
+  height: 36px;        /* reduced */
+  background: #101010;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  z-index: 5;
+}
+
+
+.service-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  filter: brightness(85%);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.3);
+}
+
+.service-title {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    z-index: 3; /* keep title above shadow */
+  bottom: 15px;
+
+}
+
+.services-swiper {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw); /* full bleed (edge to edge) */
+}
+
+/* Pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #d6b695;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #a68167 !important;
+  transform: scale(1.3);
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.services-swiper .swiper-pagination {
+  bottom: -4px !important;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+/* Tablet view */
+@media (max-width: 992px) {
+  .service-img {
+    height: 200px;
+  }
+}
+
+/* Mobile / small tablets */
+@media (max-width: 768px) {
+  .service-img {
+    height: 200px;
+  }
+  .services-title {
+    font-size: 32px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 576px) {
+    
+  .service-img {
+    height: 220px;
+  }
+  .services-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+/* @media (max-width: 540px) {
+    
+  .services-section{
+    width: 426px;
+  }
+}
+@media (max-width: 380px) {
+    
+  .services-section{
+    width: 375px;
+  }
+}
+@media (max-width: 320px) {
+    
+  .services-section{
+    width: 320px;
+  }
+} */
+

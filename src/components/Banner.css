@@ -1,0 +1,112 @@
+.banner-section {
+  position: relative;
+  width: 100vw;
+  height: 105vh;
+  overflow: hidden;
+}
+
+.banner-swiper,
+.banner-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-bottom-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(
+    to top,
+    rgba(15, 15, 15, 1) 0%,
+    rgba(15, 15, 15, 0.9) 30%,
+    rgba(15, 15, 15, 0.6) 60%,
+    rgba(15, 15, 15, 0) 100%
+  );
+  z-index: 4;
+  pointer-events: none;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  z-index: 6;
+  max-width: 90%;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.banner-social-fixed {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  gap: 30px;
+  z-index: 6;
+}
+
+.banner-social-fixed a {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.banner-social-fixed a:hover {
+  transform: scale(1.2);
+}
+
+.custom-pagination {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(46%);
+  display: flex;
+  gap: 14px;
+  z-index: 7;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: #fff;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #fff !important;
+  transform: scale(1.5);
+  width: 13px !important;
+  height: 13px !important;
+}
+
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 28px;
+    white-space: normal;
+  }
+
+  .custom-pagination {
+    bottom: 70px;
+  }
+
+  .banner-social-fixed {
+    right: 20px;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Allura";
+  src: url("./assets/fonts/Allura-Regular.ttf") format("truetype");
+  font-weight: 400; /* REGULAR */
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Allura";
+  overflow-x: hidden;
+}
+
+
+.allura-font {
+  font-family: "Allura", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  letter-spacing: 0.6px;
+  line-height: 1.25;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+
+

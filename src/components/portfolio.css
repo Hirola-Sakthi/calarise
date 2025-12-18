@@ -1,0 +1,192 @@
+.portfolio-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.portfolio-title {
+  color: white;
+  font-size: 36px; /* slightly bigger */
+  margin-bottom: 32px;
+  letter-spacing: 4px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 100%;
+  max-width: 1400px; /* increased width */
+  aspect-ratio: 16 / 9; /* can tweak for taller height */
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+/* Swiper */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img,
+.swiper-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px; /* matches card */
+}
+
+/* Floating Media Buttons */
+.media-buttons {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 18px;
+  z-index: 20;
+}
+
+/* Glass Icon Buttons */
+.media-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 12px 28px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2px);
+  border-top: 3px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.1),      
+    inset 0 3px 8px rgba(255, 255, 255, 0.2),   
+    inset 0 -3px 8px rgba(255, 255, 255, 0.2),  
+    inset 0 0 20px rgba(0, 0, 0, 0.6);  
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.media-buttons button svg {
+  font-size: 20px;
+}
+
+.media-buttons button:hover {
+  background: #a68167;
+  color: #fff;
+  border: none;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,255,255,0.35);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.icon-wrapper svg {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Pagination Dots */
+.portfolio-card .swiper-pagination {
+  bottom: 20px !important;
+  text-align: center;
+}
+
+.portfolio-card .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: white;
+  opacity: 0.4;
+  margin: 0 6px !important;
+  transition: 0.3s ease;
+}
+
+.portfolio-card .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white !important;
+  width: 14px !important;
+  height: 14px !important;
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1400px) {
+  .portfolio-card {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-card {
+    aspect-ratio: 16 / 10; /* slightly taller on tablets */
+    border-radius: 24px;
+  }
+
+  .media-buttons button {
+    gap: 24px;
+    padding: 10px 22px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-title {
+    font-size: 28px;
+  }
+
+  .portfolio-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  .media-buttons {
+    bottom: 60px;
+    gap: 16px;
+  }
+
+  .media-buttons button {
+    gap: 16px;
+    padding: 8px 18px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-card {
+    aspect-ratio: 3 / 2;
+    border-radius: 16px;
+  }
+
+  .media-buttons {
+    bottom: 40px;
+  }
+
+  .media-buttons button {
+    gap: 12px;
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+}
