@@ -3,70 +3,76 @@
   background-color: #101010;
   color: #fff;
   text-align: center;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
+/* TITLE */
 .ts-title {
-  font-size: 40px;
-  margin-bottom: 40px;
+  font-size: 45px;
+  margin-bottom: 50px;
 }
 
+/* CONTENT ROW */
 .ts-content {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 0px;
-  position: relative;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  position: relative; /* REQUIRED for absolute arrows */
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* LEFT & RIGHT ARROWS */
+/* ARROWS */
 .ts-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: #846753;
   color: #fff;
   border: none;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  /* font-size: 1.5rem; */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-  position: relative;
   z-index: 10;
 }
 
 .ts-arrow:hover {
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .ts-arrow-left {
-  margin-right: -20px;
+  left: 29px;
+  top: 92%;
+   /* adjust freely */
 }
 
 .ts-arrow-right {
-  margin-left: -20px;
+  right: 15%;
+  top: 92%;
 }
 
-/* CARD IMAGE */
+/* IMAGE CARD */
 .ts-card {
-  width: 300px;
+  width: 420px; /* increased width */
   position: relative;
 }
 
 .ts-image {
-  width: 120%;         
-  max-width: none;    
-  height: 370px;
+  width: 100%;
+  height: 400px;
   object-fit: cover;
   border-radius: 15px;
   display: block;
 }
 
-
-/* PLAY BUTTON CENTERED */
+/* PLAY BUTTON */
 .ts-play {
   position: absolute;
   top: 50%;
@@ -76,9 +82,8 @@
   height: 60px;
   border-radius: 50%;
   border: none;
-  background:#fff;
+  background: #ffffff;
   color: #1c55e0;
-  /* font-size: 1.8rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +105,7 @@
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
-    color: #fff;
+  color: #fff;
 }
 
 /* AUTHOR */
@@ -130,29 +135,24 @@
 @media (max-width: 768px) {
   .ts-content {
     flex-direction: column;
+    gap: 40px;
   }
 
   .ts-text-area {
     text-align: center;
   }
 
-  .ts-arrow-left,
+  .ts-arrow {
+    top: auto;
+    bottom: -70px;
+    transform: none;
+  }
+
+  .ts-arrow-left {
+    left: 40%;
+  }
+
   .ts-arrow-right {
-    margin: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .ts-image {
-    height: 300px;
-    width: 100%;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1200px) {
-  .ts-image {
-    width: 100%;
-    height: 370px;
+    right: 40%;
   }
 }

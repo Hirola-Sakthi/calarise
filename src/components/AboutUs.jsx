@@ -17,17 +17,17 @@ import frame from "../assets/house-parts/Layer-8.webp";
 import rug from "../assets/house-parts/Layer-9.webp";
 
 /* SECOND SET */
-import roof2 from "../assets/house-parts/desk1.webp";
-import wallLeft2 from "../assets/house-parts/Layer-3.webp";
-import wallRight2 from "../assets/house-parts/Layer-7.webp";
+// import roof2 from "../assets/house-parts/second-desk1.webp";
+import wallLeft2 from "../assets/house-parts/second-Layer-3.webp";
+import wallRight2 from "../assets/house-parts/second-Layer-7.png";
 import floor2 from "../assets/house-parts/Layer-10.webp";
 import sofa2 from "../assets/house-parts/sofa.webp";
 import plant3 from "../assets/house-parts/plant.webp";
 import plant4 from "../assets/house-parts/Plant-1.webp";
-import lamp2 from "../assets/house-parts/Ceilling-light.webp";
-import table2 from "../assets/house-parts/lamp.webp";
+import lamp2 from "../assets/house-parts/second-Ceilling-light.png";
+import table2 from "../assets/house-parts/second-lamp.webp";
 import chair2 from "../assets/house-parts/Layer-5.webp";
-import windowImg2 from "../assets/house-parts/Layer-6.webp";
+// import windowImg2 from "../assets/house-parts/Layer-6.webp";
 import frame2 from "../assets/house-parts/Layer-8.webp";
 import rug2 from "../assets/house-parts/Layer-9.webp";
 
@@ -43,7 +43,7 @@ export default function AboutUs() {
 
   const imagesSet = {
     1: { roof, wallLeft, wallRight, floor, sofa, plant, plant2, lamp, table, chair, windowImg, frame, rug },
-    2: { roof: roof2, wallLeft: wallLeft2, wallRight: wallRight2, floor: floor2, sofa: sofa2, plant: plant3, plant2: plant4, lamp: lamp2, table: table2, chair: chair2, windowImg: windowImg2, frame: frame2, rug: rug2 },
+    2: {  wallLeft: wallLeft2, wallRight: wallRight2, floor: floor2, sofa: sofa2, plant: plant3, plant2: plant4, lamp: lamp2, table: table2, chair: chair2, frame: frame2, rug: rug2 },
   };
 
   useEffect(() => {

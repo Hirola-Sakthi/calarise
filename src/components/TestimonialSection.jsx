@@ -8,19 +8,19 @@ import profilePic3 from "../assets/images/testimonial-image.webp";
 
 const testimonialData = [
   {
-    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud".`,
+    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud."`,
     author: "Sameer Rai",
     rating: "★★★★★",
     image: profilePic1,
   },
   {
-    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud"`,
+    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud."`,
     author: "Ananya Sharma",
     rating: "★★★★☆",
     image: profilePic2,
   },
   {
-    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud"`,
+    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud."`,
     author: "Rahul Mehta",
     rating: "★★★★★",
     image: profilePic3,
@@ -31,7 +31,9 @@ export default function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonialData.length) % testimonialData.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonialData.length) % testimonialData.length
+    );
   };
 
   const handleNext = () => {
@@ -49,10 +51,10 @@ export default function TestimonialSection() {
       <div className="ts-content">
         {/* LEFT ARROW */}
         <button className="ts-arrow ts-arrow-left" onClick={handlePrev}>
-          <FaAngleLeft size={30} />
+          <FaAngleLeft size={28} />
         </button>
 
-        {/* IMAGE CARD */}
+        {/* IMAGE */}
         <div className="ts-card">
           <img src={image} alt="Client" className="ts-image" />
           <button className="ts-play">
@@ -65,7 +67,7 @@ export default function TestimonialSection() {
           <p className="ts-text">{text}</p>
 
           <div className="ts-author">
-            <img src={image} alt="Author" className="ts-author-pic" />
+            <img src={image} alt={author} className="ts-author-pic" />
             <div>
               <h4 className="ts-author-name">{author}</h4>
               <div className="ts-author-stars">{rating}</div>
@@ -75,7 +77,7 @@ export default function TestimonialSection() {
 
         {/* RIGHT ARROW */}
         <button className="ts-arrow ts-arrow-right" onClick={handleNext}>
-          <FaAngleRight size={30}/>
+          <FaAngleRight size={28} />
         </button>
       </div>
     </section>

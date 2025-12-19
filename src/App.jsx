@@ -11,6 +11,7 @@ import TestimonialSection from "./components/TestimonialSection";
 import MeetFounder from "./components/MeetFounder";
 import AboutUs from "./components/AboutUs";
 import SplashCursor from "./components/SplashCursor";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <FloatingMenu />
       <ServicesSection/>
       {/* <AboutUs/> */}
+      <WhyChooseUs/>
       <Portfolio/>
       <MeetFounder/>
       <TestimonialSection/>
