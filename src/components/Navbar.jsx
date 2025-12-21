@@ -6,15 +6,21 @@ import "./Navbar.css";
 export default function NavbarComponent() {
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
-  const moreOptions = ["Option 1", "Option 2", "Option 3", "Option 4"];
+const moreOptions = ["Blog", "Testimonial", "FAQ", "Refferal"]; const servicesOptions = ["Commerical", "Residency", "Only Design"];
+
   const moreRef = useRef();
+  const servicesRef = useRef();
 
-  // Close dropdown if clicked outside
+  // Close dropdowns if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (moreRef.current && !moreRef.current.contains(event.target)) {
         setMoreOpen(false);
+      }
+      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+        setServicesOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -32,9 +38,33 @@ export default function NavbarComponent() {
       <div className={`nav-links ${open ? "open" : ""}`}>
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
 
+        {/* Services Dropdown */}
+        <div
+          className="more-link"
+          ref={servicesRef}
+          onClick={() => setServicesOpen(!servicesOpen)}
+        >
+          Services <FaChevronDown className="down-arrow" />
+        </div>
+        {servicesOpen &&
+  servicesOptions.map((option, idx) => (
+    <a
+      key={idx}
+      href={`#${option.toLowerCase().replace(" ", "")}`}
+      className="dropdown-item"
+      style={{
+        top: `${70 + idx * 50}px`,
+        left: "350px",  // <-- move dropdown a bit left
+        width: "170px",
+        position: "absolute", // ensure it positions correctly
+      }}
+    >
+      {option}
+    </a>
+  ))}
+
+   <a href="#gallery">Gallery</a>
         {/* More Dropdown */}
         <div
           className="more-link"
@@ -43,14 +73,14 @@ export default function NavbarComponent() {
         >
           More <FaChevronDown className="down-arrow" />
         </div>
-
+        
         {moreOpen &&
           moreOptions.map((option, idx) => (
             <a
               key={idx}
               href={`#${option.toLowerCase().replace(" ", "")}`}
               className="dropdown-item"
-            style={{ top: `${70 + idx * 50}px`, width: '170px' }}             
+              style={{ top: `${70 + idx * 50}px`, width: "170px" }}
             >
               {option}
             </a>
@@ -61,10 +91,8 @@ export default function NavbarComponent() {
         </a>
       </div>
 
-      <FaBars
-        className="menu-icon-mobile"
-        onClick={() => setOpen(!open)}
-      />
+      {/* Mobile Menu Icon */}
+      <FaBars className="menu-icon-mobile" onClick={() => setOpen(!open)} />
     </nav>
   );
 }

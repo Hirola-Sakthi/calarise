@@ -1,7 +1,7 @@
 import React from "react";
 import "./WhyChooseUs.css";
 import { FaHome, FaCheck, FaUserCheck } from "react-icons/fa";
-import roomImg from "../assets/images/home-slider-1.webp";
+import roomImg from "../assets/images/why-choose-us.webp";
 
 const WhyChooseUs = () => {
   return (
