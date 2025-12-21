@@ -1,4 +1,4 @@
-/* Global box-sizing to avoid overflow issues */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -12,7 +12,7 @@
   width: 100vw;
 }
 
-/* Soft dark pattern overlay */
+
 .services-section::before {
   content: "";
   position: absolute;
@@ -48,15 +48,15 @@
 .service-card::after {
   content: "";
   position: absolute;
-  bottom: 0;      /* start exactly from bottom */
+  bottom: 0;     
   left: 0;
   width: 100%;
-  height: 120px;   /* adjust how tall the black area should be */
+  height: 120px;   
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.85) 0%,   /* very dark at bottom */
-    rgba(0, 0, 0, 0.55) 40%,  /* soften */
-    rgba(0, 0, 0, 0) 100%     /* fully transparent above */
+    rgba(0, 0, 0, 0.85) 0%,  
+    rgba(0, 0, 0, 0.55) 40%,  
+    rgba(0, 0, 0, 0) 100%    
   );
   pointer-events: none;
   z-index: 2;
@@ -68,14 +68,14 @@
   overflow: hidden;
 }
 
-/* TOP curve */
+
 .services-swiper-wrap::before {
   content: "";
   position: absolute;
-  top: -20px;          /* reduced */
+  top: -20px;         
   left: 0;
   width: 100%;
-  height: 36px;        /* reduced */
+  height: 36px;        
   background: #101010;
   border-bottom-left-radius: 100% 100%;
   border-bottom-right-radius: 100% 100%;
@@ -85,10 +85,10 @@
 .services-swiper-wrap::after {
   content: "";
   position: absolute;
-  bottom: -18px;       /* reduced */
+  bottom: -18px;       
   left: 0;
   width: 100%;
-  height: 36px;        /* reduced */
+  height: 36px;       
   background: #101010;
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
@@ -106,6 +106,7 @@
 
 .service-card:hover .service-img {
   transform: scale(1.3);
+  border-radius: 20px;
 }
 
 .service-title {
@@ -117,14 +118,14 @@
   color: white;
   font-weight: 500;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-    z-index: 3; /* keep title above shadow */
+  z-index: 3; 
   bottom: 15px;
 
 }
 
 .services-swiper {
   width: 100vw !important;
-  margin-left: calc(50% - 50vw); /* full bleed (edge to edge) */
+  margin-left: calc(50% - 50vw); 
 }
 
 /* Pagination bullets */
