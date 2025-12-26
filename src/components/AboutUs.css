@@ -1,43 +1,60 @@
-/* =========================
-   SECTION LAYOUT
-========================= */
 .about-assemble {
   position: relative;
   display: flex;
   justify-content: space-between;
   padding: 100px 8%;
   min-height: 750px;
-  height: 100vh;
+  height: 125vh;
   background: #101010;
   overflow: hidden;
   color: #fff;
 }
 
-/* =========================
-   BACKGROUND IMAGE
-========================= */
-.about-bg {
+.about-assemble::after {
+  content: "";
   position: absolute;
   inset: 0;
-  z-index: 1;
-  pointer-events: none;
+
+  background-image: url("/src/assets/images/pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.03;
+  z-index: 0;
 }
 
-.about-bg img {
-  position: absolute;
-  right: -150px;   /* MOVE LEFT / RIGHT */
-  bottom: -100px; /* MOVE UP / DOWN */
-  width: 900px;   /* CONTROL SIZE */
-  height: auto;
-  opacity: 0.25;
-  object-fit: contain;
+.about-wrapper {
+  position: relative;
+  background: #101010;
+  overflow: hidden;
 }
 
 /* =========================
-   CONTENT
+   VECTOR BACKGROUND LAYER
 ========================= */
+.vector-bg {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 90vh;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+.vector-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  filter: brightness(1.1) contrast(1.05);
+}
+
 .content {
-  max-width: 480px;
+  max-width: 580px;
   z-index: 3;
   position: relative;
 }
@@ -47,7 +64,7 @@
 }
 
 .content h2 {
-  font-size: 26px;
+  font-size: 30px;
   line-height: 1.3;
   margin: 20px 0;
 }
@@ -55,13 +72,11 @@
 .content p {
   opacity: 0.85;
   line-height: 1.6;
+  font-size: 18px;
 }
 
-/* =========================
-   BUTTON
-========================= */
 .read-more {
-  align-self: center ;  
+  align-self: center;
   margin-top: 20px;
   display: inline-flex;
   align-items: center;
@@ -77,11 +92,9 @@
   -webkit-backdrop-filter: blur(2px);
   border-top: 3px solid rgba(255, 255, 255, 0.25);
   border-bottom: 3px solid rgba(255, 255, 255, 0.25);
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.1),      
-    inset 0 3px 8px rgba(255, 255, 255, 0.2),   
-    inset 0 -3px 8px rgba(255, 255, 255, 0.2),  
-    inset 0 0 20px rgba(0, 0, 0, 0.6);   
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.6);
   transition: 0.3s ease;
 }
 
@@ -96,87 +109,132 @@
 }
 
 .read-more:hover {
-    background: #a68167;
+  background: #a68167;
   color: #fff;
   border: none;
   transform: translateY(-3px);
+  box-shadow: none;
 }
 
-/* =========================
-   PLANT IMAGE
-========================= */
 .plant-image {
   margin-top: 35px;
 }
 
 .plant-image img {
-  width: 180px;
+  width: 200px;
   height: auto;
   opacity: 0.9;
 }
 
-/* =========================
-   EXPERIENCE BADGE
-========================= */
 .experience-badge {
   position: absolute;
   right: 30%;
-  top: 120px;
+  top: 65px;
   text-align: center;
   z-index: 4;
 }
 
 .experience-badge h3 {
-  font-size: 34px;
+  font-size: 46px;
   margin: 0;
+  font-weight: 700;
 }
 
 .experience-badge p {
-  font-size: 14px;
+  font-size: 30px;
   opacity: 0.8;
 }
 
-/* =========================
-   ASSEMBLY WRAPPER
-========================= */
 .assemble-wrapper {
   position: relative;
   width: 600px;
   height: 500px;
-  margin-top: 140px;
+  margin-top: 195px;
   z-index: 2;
 }
 
 .assemble-part {
   position: absolute;
-  transition:
-    transform 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.8s ease;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
 }
 
 /* =========================
    SET 1 POSITIONS
 ========================= */
-.assembled.wallLeft { top: 81px; left: -84px; width: 476px; }
-.assembled.wallRight { top: 81px; right: -68px; width: 350px; }
-.assembled.floor { bottom: 0; left: -85px; width: 750px; }
-.assembled.sofa { bottom: 33px; left: -10px; width: 600px; z-index: 3; }
-.assembled.lamp { top: 26px; left: -86px; width: 753px; }
+.assembled.wallLeft {
+  top: 100px;
+  left: -215px;
+  width: 540px;
+}
+.assembled.wallRight {
+  top: 97px;
+  right: -81px;
+  width: 452px;
+}
+.assembled.floor {
+  bottom: -108px;
+  left: -214px;
+  width: 887px;
+}
+.assembled.sofa {
+  bottom: -65px;
+  left: -105px;
+  width: 650px;
+  z-index: 3;
+}
+.assembled.lamp {
+  top: 30px;
+  left: -216px;
+  width: 895px;
+}
 
 /* =========================
    SET 2 OVERRIDES
 ========================= */
-.set-2 .assembled.wallLeft { top: 100px; left: -40px; width: 430px; }
-.set-2 .assembled.wallRight { top: 106px; right: -61px; width: 342px; }
-.set-2 .assembled.floor { bottom: 47px; left: -37px; width: 700px; }
-.set-2 .assembled.lamp { top: 37px; left: -42px; width: 700px; }
-.set-2 .sofa { display: none; }
+.set-2 .assembled.wallLeft {
+  top: 100px;
+  left: -215px;
+  width: 540px;
+}
+.set-2 .assembled.wallRight {
+  top: 97px;
+  right: -79px;
+  width: 441px;
+}
+.set-2 .assembled.floor {
+  bottom: -44px;
+  left: -213px;
+  width: 894px;
+}
+.set-2 .assembled.lamp {
+  top: 11px;
+  left: -212px;
+  width: 893px;
+}
+.set-2 .sofa {
+  display: none;
+}
 
 /* =========================
    DISASSEMBLED
 ========================= */
-.lamp.disassembled { opacity: 0; transform: translateY(-400px); }
-.floor.disassembled { opacity: 0; transform: translateY(500px); }
-.sofa.disassembled { opacity: 0; transform: translateY(400px); }
-.wallLeft.disassembled { opacity: 0; transform: translateX(-500px); }
-.wallRight.disassembled { opacity: 0; transform: translateX(500px); }
+.lamp.disassembled {
+  opacity: 0;
+  transform: translateY(-400px);
+}
+.floor.disassembled {
+  opacity: 0;
+  transform: translateY(500px);
+}
+.sofa.disassembled {
+  opacity: 0;
+  transform: translateY(400px);
+}
+.wallLeft.disassembled {
+  opacity: 0;
+  transform: translateX(-500px);
+}
+.wallRight.disassembled {
+  opacity: 0;
+  transform: translateX(500px);
+}

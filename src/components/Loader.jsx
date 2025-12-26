@@ -4,7 +4,7 @@ import "./Loader.css";
 const Loader = () => {
   return (
     <div className="loader-wrapper">
-      <h1 className="brand-name">Calarise</h1>
+      <h1 className="brand-name">Calaris</h1>
       
       <div className="brand-line">
         <span></span>

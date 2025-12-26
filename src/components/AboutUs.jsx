@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./AboutUs.css";
+import "./WhyChooseUs.css";
+import { FaHome, FaCheck, FaUserCheck } from "react-icons/fa";
+import roomImg from "../assets/images/why-choose-us.webp";
 
 /* SET 1 */
 import wallLeft from "../assets/house-parts/left-wall.png";
@@ -18,6 +21,9 @@ import lamp2 from "../assets/house-parts/ceilling-light-2.png";
 import bgImage from "../assets/house-parts/floor-2.png";
 import plantImg from "../assets/house-parts/plant-1.webp";
 
+import Vector from "../assets/images/vector.png";
+
+
 import { FaArrowRight } from "react-icons/fa";
 
 export default function AboutUs() {
@@ -29,8 +35,16 @@ export default function AboutUs() {
 
   const imagesSet = {
     1: { wallLeft, wallRight, floor, sofa, lamp },
-    2: { wallLeft: wallLeft2, wallRight: wallRight2, floor: floor2, lamp: lamp2 }
+    2: {
+      wallLeft: wallLeft2,
+      wallRight: wallRight2,
+      floor: floor2,
+      lamp: lamp2,
+    },
   };
+
+  const START_DELAY = 2000;
+  const DISASSEMBLE_DURATION = 2000;
 
   useEffect(() => {
     const onScroll = () => {
@@ -46,8 +60,8 @@ export default function AboutUs() {
           setTimeout(() => {
             setCurrentSet(2);
             requestAnimationFrame(() => setAssembled(true));
-          }, 1300);
-        }, 1000);
+          }, DISASSEMBLE_DURATION);
+        }, START_DELAY);
       }
     };
 
@@ -58,30 +72,37 @@ export default function AboutUs() {
   const images = imagesSet[currentSet];
 
   return (
+    <section className="about-wrapper">
+  <div className="vector-bg">
+    <img src={Vector} alt="decorative vector" />
+  </div>
     <section className="about-assemble" ref={sectionRef}>
-
+      
       {/* BACKGROUND IMAGE */}
-      <div className="about-bg">
+      {/* <div className="about-bg">
         <img src={bgImage} alt="" />
-      </div>
+      </div> */}
 
       {/* CONTENT */}
       <div className="content">
         <span className="tag allura-font">About Us</span>
 
         <h2>
-          Shaping Spaces, Comforting Lives <br />
-          Timeless design meets modern comfort
+          Shaping Spaces, Comforting Lives
+          Timeless design meets modern comfort for every home and family.
         </h2>
 
         <p>
-          At THE CALARIS, we believe that great design goes
-          beyond aesthetics — it’s about creating spaces
-          that reflect who you are, how you live, and what inspires you.
+          At THE CALARIS, we believe that great design goes<br/> beyond aesthetics —
+          it’s about creating spaces that <br/> reflect who you are, how you live, and
+          what inspires you.
         </p>
 
         <button className="read-more">
-          Read More <span><FaArrowRight /></span>
+          Read More{" "}
+          <span>
+            <FaArrowRight />
+          </span>
         </button>
 
         {/* PLANT IMAGE */}
@@ -109,7 +130,66 @@ export default function AboutUs() {
           />
         ))}
       </div>
+    </section>
 
+
+     <section className="why-choose-section">
+          <div className="why-choose-container">
+        
+            <div className="why-image-box">
+              <img src={roomImg} alt="Interior Design" />
+            </div>
+    
+            <div className="why-content-box">
+              <h2 className="why-title allura-font">Why Choose Us</h2>
+    
+              <p className="why-subtitle">
+                We design sofas that make every moment at home relaxing and enjoyable.
+              </p>
+    
+              <div className="why-cards">
+    
+                <button className="why-btn">
+                  <span className="icon">
+                    <FaHome />
+                  </span>
+                  <span className="text">
+                    Timeless Design & Style Trends
+                  </span>
+                </button>
+    
+                <button className="why-btn">
+                  <span className="icon">
+                    <FaCheck />
+                  </span>
+                  <span className="text">
+                    Made with High-Quality Materials
+                  </span>
+                </button>
+    
+                <button className="why-btn">
+                  <span className="icon">
+                    <FaUserCheck />
+                  </span>
+                  <span className="text">
+                    Expertise You Can Trust
+                  </span>
+                </button>
+    
+                <button className="why-btn">
+                  <span className="icon">
+                    <FaUserCheck />
+                  </span>
+                  <span className="text">
+                    Timeless Design & Style Trends
+                  </span>
+                </button>
+    
+              </div>
+            </div>
+    
+          </div>
+        </section>
     </section>
   );
 }

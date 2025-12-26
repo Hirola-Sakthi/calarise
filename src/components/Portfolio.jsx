@@ -22,7 +22,7 @@ export default function Portfolio() {
 
   return (
     <section className="portfolio-section">
-      <h2 className="portfolio-title">Portfolio</h2>
+      <h2 className="portfolio-title allura-font">Portfolio</h2>
 
       <div className="portfolio-card">
         <Swiper

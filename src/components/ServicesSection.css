@@ -10,17 +10,23 @@
   position: relative;
   overflow: hidden;
   width: 100vw;
+  
 }
 
 
-.services-section::before {
+.services-section::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  opacity: 0.15;
-  pointer-events: none;
+
+  background-image: url("/src/assets/images/pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.03;
+  z-index: 0;
 }
+
 
 .container {
   max-width: 1200px;
@@ -89,7 +95,7 @@
   left: 0;
   width: 100%;
   height: 36px;       
-  background: #101010;
+  /* background: #101010; */
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
   z-index: 5;

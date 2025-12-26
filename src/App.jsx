@@ -37,8 +37,8 @@ function App() {
       <Banner />
       <FloatingMenu />
       <ServicesSection/>
-      {/* <AboutUs/> */}
-      <WhyChooseUs/>
+      <AboutUs/>
+      {/* <WhyChooseUs/> */}
       <Portfolio/>
       <MeetFounder/>
       <TestimonialSection/>

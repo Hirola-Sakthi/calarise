@@ -1,11 +1,27 @@
 .ts-section {
-  padding: 60px 20px;
+  padding: 100px 20px;
   background-color: #101010;
   color: #fff;
   text-align: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
+
+.ts-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/src/assets/images/pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.03;   /* adjust if needed */
+  z-index: 0;
+}
+
 
 /* TITLE */
 .ts-title {
