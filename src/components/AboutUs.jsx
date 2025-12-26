@@ -19,7 +19,7 @@ import lamp2 from "../assets/house-parts/ceilling-light-2.png";
 
 /* EXTRA IMAGES */
 import bgImage from "../assets/house-parts/floor-2.png";
-import plantImg from "../assets/house-parts/plant-1.WEBP";
+import plantImg from "../assets/house-parts/plant-1.webp";
 
 import Vector from "../assets/images/vector.png";
 
