@@ -71,10 +71,18 @@
   filter: brightness(1.1) contrast(1.05);
 }
 
-.content {
+/* .content {
   max-width: 580px;
   z-index: 3;
   position: relative;
+} */
+
+
+.content {
+  max-width: 703px;
+  z-index: 3;
+  position: relative;
+  top: -100px;
 }
 
 .tag {
@@ -185,7 +193,7 @@
   height: 500px;
   margin-top: 95px;
   z-index: 2;
-  left: 25px;
+  left:-70px;
 }
 
 .assemble-part {
@@ -204,7 +212,7 @@
 }
 .assembled.wallRight {
   top: 97px;
-  right: -81px;
+  right: -173px;
   width: 452px;
 }
 .assembled.floor {
@@ -234,7 +242,7 @@
 }
 .set-2 .assembled.wallRight {
   top: 97px;
-  right: -79px;
+  right: -174px;
   width: 441px;
 }
 .set-2 .assembled.floor {
