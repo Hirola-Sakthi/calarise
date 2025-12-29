@@ -292,4 +292,12 @@
     z-index: 2;
     left: 90px;
 }
+
+.experience-badge {
+    position: absolute;
+    right: 20%;
+    top: 20px;
+    text-align: center;
+    z-index: 4;
+}
 }
