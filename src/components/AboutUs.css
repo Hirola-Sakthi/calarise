@@ -263,24 +263,32 @@
   .set-2 .assembled.wallLeft {
   top: 78px;
   left: -554px;
-  width: 800px;
+  width: 700px;
 }
 .set-2 .assembled.wallRight {
   top: 75px;
-  right: -150px;
-  width: 642px;
+  right: -40px;
+  width: 600px;
 }
 .set-2 .assembled.floor {
-  bottom: -230px;
-  left: -551px;
-  width: 1300px;
+  bottom: -167px;
+  left: -556px;
+  width: 1200px;
 }
 .set-2 .assembled.lamp {
-  top: -53px;
+  top: -47px;
   left: -554px;
-  width: 1300px;
+  width: 1200px;
 }
 .set-2 .sofa {
   display: none;
+}
+
+.assemble-wrapper{
+    position: relative;
+    width: 600px;
+    height: 500px;
+    margin-top: 140px;
+    z-index: 2;
 }
 }
