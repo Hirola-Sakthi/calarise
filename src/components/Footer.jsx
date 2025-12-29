@@ -45,12 +45,12 @@ export default function Footer() {
 
           <div className="footer-contact-row">
             <div>
-              <h4>Call us</h4>
+              <h4 className="footer-call">Call us</h4>
               <p>+1 800 854-36-80</p>
             </div>
 
             <div>
-              <h4>Follow us</h4>
+              <h4 className="footer-call">Follow us</h4>
               <div className="footer-icons">
                 <FaInstagram />
                 <FaFacebookF />

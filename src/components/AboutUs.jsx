@@ -29,7 +29,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default function AboutUs() {
   const [assembled, setAssembled] = useState(true);
   const [currentSet, setCurrentSet] = useState(1);
-
+  const containerRef = useRef(null);
   const sectionRef = useRef(null);
   const hasAnimated = useRef(false);
 
@@ -70,6 +70,25 @@ export default function AboutUs() {
   }, []);
 
   const images = imagesSet[currentSet];
+
+ useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      },
+      { threshold: 0.1 } 
+    );
+
+    const elements = containerRef.current.querySelectorAll(".scroll-up");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
 
   return (
     <section className="about-wrapper">
@@ -133,14 +152,14 @@ export default function AboutUs() {
     </section>
 
 
-     <section className="why-choose-section">
-          <div className="why-choose-container">
+     <section className="why-choose-section"  ref={containerRef}>
+          <div className="why-choose-container ">
         
             <div className="why-image-box">
-              <img src={roomImg} alt="Interior Design" />
+              <img src={roomImg} alt="Interior Design" className="scroll-up" />
             </div>
     
-            <div className="why-content-box">
+            <div className="why-content-box scroll-up">
               <h2 className="why-title allura-font">Why Choose Us</h2>
     
               <p className="why-subtitle">
@@ -149,7 +168,7 @@ export default function AboutUs() {
     
               <div className="why-cards">
     
-                <button className="why-btn">
+                <button className="why-btn scroll-up">
                   <span className="icon">
                     <FaHome />
                   </span>
@@ -158,7 +177,7 @@ export default function AboutUs() {
                   </span>
                 </button>
     
-                <button className="why-btn">
+                <button className="why-btn scroll-up">
                   <span className="icon">
                     <FaCheck />
                   </span>
@@ -167,7 +186,7 @@ export default function AboutUs() {
                   </span>
                 </button>
     
-                <button className="why-btn">
+                <button className="why-btn scroll-up">
                   <span className="icon">
                     <FaUserCheck />
                   </span>
@@ -176,7 +195,7 @@ export default function AboutUs() {
                   </span>
                 </button>
     
-                <button className="why-btn">
+                <button className="why-btn scroll-up">
                   <span className="icon">
                     <FaUserCheck />
                   </span>
