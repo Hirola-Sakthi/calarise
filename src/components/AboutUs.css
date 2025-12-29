@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 100px 8%;
   min-height: 750px;
-  height: 125vh;
+  height: 100vh;
   background: #101010;
   overflow: hidden;
   color: #fff;
@@ -256,4 +256,31 @@
 .wallRight.disassembled {
   opacity: 0;
   transform: translateX(500px);
+}
+
+
+@media(min-width:1950px){
+  .set-2 .assembled.wallLeft {
+  top: 78px;
+  left: -554px;
+  width: 800px;
+}
+.set-2 .assembled.wallRight {
+  top: 75px;
+  right: -150px;
+  width: 642px;
+}
+.set-2 .assembled.floor {
+  bottom: -230px;
+  left: -551px;
+  width: 1300px;
+}
+.set-2 .assembled.lamp {
+  top: -53px;
+  left: -554px;
+  width: 1300px;
+}
+.set-2 .sofa {
+  display: none;
+}
 }
