@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 100px 8%;
   min-height: 750px;
-  height: 100vh;
+  height: 120vh;
   background: #101010;
   overflow: hidden;
   color: #fff;
@@ -19,7 +19,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.03;
+  opacity: 0.01;
   z-index: 0;
 }
 
@@ -140,6 +140,8 @@
   border: none;
   transform: translateY(-3px);
   box-shadow: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .plant-image {
@@ -191,9 +193,9 @@
   position: relative;
   width: 600px;
   height: 500px;
-  margin-top: 95px;
+  margin-top: 80px;
   z-index: 2;
-  left:-70px;
+  left:-10px;
 }
 
 .assemble-part {
@@ -212,7 +214,7 @@
 }
 .assembled.wallRight {
   top: 97px;
-  right: -173px;
+  right: -90px;
   width: 452px;
 }
 .assembled.floor {
@@ -242,7 +244,7 @@
 }
 .set-2 .assembled.wallRight {
   top: 97px;
-  right: -174px;
+  right: -90px;
   width: 441px;
 }
 .set-2 .assembled.floor {

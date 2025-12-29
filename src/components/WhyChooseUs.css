@@ -22,7 +22,7 @@
   overflow: hidden;
   margin: 0 auto;
   position: relative;
-    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 35px 60px rgba(0, 0, 0, 0.6);
 }
 
 .why-image-box::before {
@@ -34,14 +34,13 @@
   height: 120px;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.95)
+    rgba(16, 16, 16, 0),
+    rgba(16, 16, 16, 0.7),
+    rgba(16, 16, 16, 0.95)
   );
   z-index: 4;
   pointer-events: none;
 }
-
 
 .why-image-box::after {
   content: "";
@@ -52,12 +51,11 @@
     rgba(16, 16, 16, 0) 35%,
     rgba(16, 16, 16, 0.6) 60%,
     rgba(16, 16, 16, 0.9) 80%,
-    #101010 100%
+    #101010 95%
   );
   z-index: 3;
   pointer-events: none;
 }
-
 
 .why-image-box img {
   width: 100%;
@@ -110,16 +108,17 @@
   border-bottom: 2px solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35),
     inset 0 4px 10px rgba(255, 255, 255, 0.2),
-    inset 0 -4px 10px rgba(255, 255, 255, 0.25),
-    inset 0 0 22px rgba(0, 0, 0, 0.);
+    inset 0 -4px 10px rgba(255, 255, 255, 0.25), inset 0 0 22px rgba(0, 0, 0, 0);
   color: #fff;
   transition: all 0.3s ease;
 }
 
 .why-btn:hover {
-  background: #463427;
+  background: #5B3F2A;
   color: #fff;
   border: none;
+  border-top: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   transform: translateY(-3px);
   box-shadow: none;
 }

@@ -27,7 +27,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.02; /* subtle */
+  opacity: 0.01; /* subtle */
   z-index: 0;
   pointer-events: none;
 }
@@ -80,7 +80,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom right;
-  opacity: 3;
+  opacity: 1;
   z-index: -1;
   pointer-events: none;
 }
@@ -140,6 +140,8 @@
   border: none;
   transform: translateY(-3px);
   box-shadow: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 /* Icon bubble */
