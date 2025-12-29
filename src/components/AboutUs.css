@@ -144,10 +144,18 @@
   opacity: 0.9;
 }
 
-.experience-badge {
+/* .experience-badge {
   position: absolute;
   right: 30%;
   top: 65px;
+  text-align: center;
+  z-index: 4;
+} */
+
+.experience-badge {
+  position: absolute;
+  right: 22%;
+  top: 20px;
   text-align: center;
   z-index: 4;
 }
@@ -163,12 +171,21 @@
   opacity: 0.8;
 }
 
-.assemble-wrapper {
+/* .assemble-wrapper {
   position: relative;
   width: 600px;
   height: 500px;
   margin-top: 195px;
   z-index: 2;
+} */
+
+.assemble-wrapper {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin-top: 95px;
+  z-index: 2;
+  left: 25px;
 }
 
 .assemble-part {
