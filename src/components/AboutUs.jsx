@@ -43,7 +43,7 @@ export default function AboutUs() {
     },
   };
 
-  const START_DELAY = 1000;
+  const START_DELAY = 2000;
   const DISASSEMBLE_DURATION = 1000;
 
   useEffect(() => {
