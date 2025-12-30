@@ -20,13 +20,15 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  opacity: 0.01;   /* adjust if needed */
+  opacity: 0.01;
+  /* adjust if needed */
   z-index: 0;
 }
 
 .portfolio-title {
   color: white;
-  font-size: 55px; /* slightly bigger */
+  font-size: 55px;
+  /* slightly bigger */
   margin-bottom: 32px;
   letter-spacing: 4px;
   font-weight: 300;
@@ -36,15 +38,15 @@
 .portfolio-card {
   position: relative;
   width: 100%;
-  max-width: 1400px; /* increased width */
-  aspect-ratio: 16 / 9; /* can tweak for taller height */
+  max-width: 1400px;
+  aspect-ratio: 16 / 9;
   border-radius: 32px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
 }
 
-/* Swiper */
+
 .swiper,
 .swiper-wrapper,
 .swiper-slide {
@@ -57,10 +59,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 32px; /* matches card */
+  border-radius: 32px;
 }
 
-/* Floating Media Buttons */
+
 .media-buttons {
   position: absolute;
   bottom: 90px;
@@ -71,7 +73,7 @@
   z-index: 20;
 }
 
-/* Glass Icon Buttons */
+
 .media-buttons button {
   display: flex;
   align-items: center;
@@ -84,10 +86,10 @@
   border-top: 3px solid rgba(255, 255, 255, 0.25);
   border-bottom: 3px solid rgba(255, 255, 255, 0.25);
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.1),      
-    inset 0 3px 8px rgba(255, 255, 255, 0.2),   
-    inset 0 -3px 8px rgba(255, 255, 255, 0.2),  
-    inset 0 0 20px rgba(0, 0, 0, 0.3);  
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 20px;
   font-weight: 500;
@@ -104,7 +106,7 @@
   color: #fff;
   border: none;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255,255,255,0.35);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.35);
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
 }
@@ -159,7 +161,8 @@
 
 @media (max-width: 1024px) {
   .portfolio-card {
-    aspect-ratio: 16 / 10; /* slightly taller on tablets */
+    aspect-ratio: 16 / 10;
+    /* slightly taller on tablets */
     border-radius: 24px;
   }
 
@@ -167,6 +170,23 @@
     gap: 24px;
     padding: 10px 22px;
     font-size: 18px;
+  }
+
+  .portfolio-card .swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .portfolio-card  .swiper-slide img,
+ .portfolio-card .swiper-slide video {
+    width: 90%;
+    height: 600px;
+  }
+
+  .portfolio-card .swiper-pagination {
+    bottom: 35px !important;
   }
 }
 

@@ -36,7 +36,7 @@ const moreOptions = ["Blog", "Testimonial", "FAQ", "Refferal"]; const servicesOp
       </div>
 
       <div className={`nav-links ${open ? "open" : ""}`}>
-        <a href="#home">Home</a>
+        <a href="#home" className="home-link">Home</a>
         <a href="#about">About Us</a>
 
         {/* Services Dropdown */}

@@ -18,10 +18,9 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  opacity: 0.01;   /* adjust if needed */
+  opacity: 0.01; /* adjust if needed */
   z-index: 0;
 }
-
 
 /* TITLE */
 .ts-title {
@@ -66,7 +65,7 @@
 .ts-arrow-left {
   left: 29px;
   top: 92%;
-   /* adjust freely */
+  /* adjust freely */
 }
 
 .ts-arrow-right {
@@ -145,6 +144,23 @@
 
 .ts-author-stars {
   color: gold;
+}
+
+@media (max-width: 1024px) {
+  .ts-card {
+    width: 320px;
+  }
+  .ts-text-area {
+    font-size: 15px;
+  }
+  .ts-arrow-left {
+    left: 50%;
+    top: 92%;
+  }
+  .ts-arrow-right {
+    left: 65%;
+    top: 92%;
+  }
 }
 
 /* RESPONSIVE */

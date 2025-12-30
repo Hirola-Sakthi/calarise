@@ -95,6 +95,13 @@
   height: 13px !important;
 }
 
+
+@media(max-width:1024px){
+  .banner-content h1{
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .banner-content h1 {
     font-size: 28px;

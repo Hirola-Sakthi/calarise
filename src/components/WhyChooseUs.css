@@ -161,3 +161,32 @@
     font-size: 20px;
   }
 }
+
+
+@media(max-width:1024px){
+  .why-subtitle{
+  font-size: 20px;
+}
+.why-image-box{
+  max-width: 500px;
+  height: 500px;
+}
+.why-btn{
+  padding: 5px 15px;
+}
+.why-btn .text{
+  font-size: 19px;
+}
+.why-btn .icon{
+  font-size: 25px;
+}
+.why-image-box::after{
+    background: linear-gradient(
+    to bottom,
+    rgba(16, 16, 16, 0) 60%,
+    rgba(16, 16, 16, 0.6) 90%,
+    rgba(16, 16, 16, 0.9) 95%,
+    #101010 100%
+  );
+}
+}

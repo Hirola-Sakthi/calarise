@@ -6,7 +6,6 @@
   height: 132vh;
 }
 
-
 .founder-section::before {
   content: "";
   position: absolute;
@@ -17,7 +16,6 @@
   background-size: 100% auto;
   z-index: 1;
 }
-
 
 .founder-section::after {
   content: "";
@@ -32,8 +30,6 @@
   pointer-events: none;
 }
 
-
-
 .founder-container {
   width: 100%;
   /* max-width: 1300px; */
@@ -41,11 +37,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: stretch; 
+  align-items: stretch;
   position: relative;
   z-index: 2;
 }
-
 
 .founder-image-box {
   padding: 20px;
@@ -56,17 +51,16 @@
 
 .founder-image {
   width: 228%;
-  height: 123%;        
+  height: 123%;
   object-fit: cover;
   border-radius: 12px;
 }
-
 
 .founder-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  position: relative; 
+  position: relative;
 }
 
 .founder-content::after {
@@ -84,7 +78,6 @@
   z-index: -1;
   pointer-events: none;
 }
-
 
 .founder-title {
   font-size: 55px;
@@ -110,7 +103,7 @@
 
 /* BUTTON */
 .founder-btn {
-  align-self: center ;  
+  align-self: center;
   margin-top: -20px;
   display: inline-flex;
   align-items: center;
@@ -126,11 +119,9 @@
   -webkit-backdrop-filter: blur(2px);
   border-top: 3px solid rgba(255, 255, 255, 0.25);
   border-bottom: 3px solid rgba(255, 255, 255, 0.25);
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.1),      
-    inset 0 3px 8px rgba(255, 255, 255, 0.2),   
-    inset 0 -3px 8px rgba(255, 255, 255, 0.2),  
-    inset 0 0 20px rgba(0, 0, 0, 0.6);   
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.6);
   transition: 0.3s ease;
 }
 
@@ -163,6 +154,36 @@
 }
 
 /* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1024px) {
+
+  .founder-section{
+    height: 120vh;
+  }
+  .founder-text {
+    font-size: 17px;
+  }
+  .founder-name {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .founder-image {
+    width: 228%;
+    height: 119%;
+    margin-top: 50px;
+  }
+  .founder-content::after {
+    width: 400px;
+    height: 400px;
+    bottom: -35px;
+  }
+  .founder-btn {
+    font-size: 18px;
+    padding: 5px 15px;
+    margin-top: 0px;
+  }
+}
+
 @media (max-width: 900px) {
   .founder-container {
     grid-template-columns: 1fr;

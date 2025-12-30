@@ -26,8 +26,8 @@
 .scroll-up {
   transform: translateY(50px);
   opacity: 0;
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out; 
-  transition-delay: 0s; 
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  transition-delay: 0s;
 }
 
 .scroll-up.active {
@@ -35,11 +35,18 @@
   opacity: 1;
 }
 
-.scroll-up:nth-child(1) { transition-delay: 0.1s; }
-.scroll-up:nth-child(2) { transition-delay: 0.3s; }
-.scroll-up:nth-child(3) { transition-delay: 0.5s; }
-.scroll-up:nth-child(4) { transition-delay: 0.7s; }
-
+.scroll-up:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.scroll-up:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.scroll-up:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.scroll-up:nth-child(4) {
+  transition-delay: 0.7s;
+}
 
 .about-wrapper {
   position: relative;
@@ -76,7 +83,6 @@
   z-index: 3;
   position: relative;
 } */
-
 
 .content {
   max-width: 703px;
@@ -195,13 +201,12 @@
   height: 500px;
   margin-top: 80px;
   z-index: 2;
-  left:-10px;
+  left: -10px;
 }
 
 .assemble-part {
   position: absolute;
-  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.8s ease;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
 }
 
 /* =========================
@@ -285,46 +290,129 @@
   transform: translateX(500px);
 }
 
-
-@media(min-width:1750px){
+@media (min-width: 1750px) {
   .set-2 .assembled.wallLeft {
-  top: 78px;
-  left: -554px;
-  width: 700px;
-}
-.set-2 .assembled.wallRight {
-  top: 75px;
-  right: -40px;
-  width: 600px;
-}
-.set-2 .assembled.floor {
-  bottom: -167px;
-  left: -556px;
-  width: 1200px;
-}
-.set-2 .assembled.lamp {
-  top: -47px;
-  left: -554px;
-  width: 1200px;
-}
-.set-2 .sofa {
-  display: none;
-}
+    top: 78px;
+    left: -554px;
+    width: 700px;
+  }
+  .set-2 .assembled.wallRight {
+    top: 75px;
+    right: -40px;
+    width: 600px;
+  }
+  .set-2 .assembled.floor {
+    bottom: -167px;
+    left: -556px;
+    width: 1200px;
+  }
+  .set-2 .assembled.lamp {
+    top: -47px;
+    left: -554px;
+    width: 1200px;
+  }
+  .set-2 .sofa {
+    display: none;
+  }
 
-.assemble-wrapper{
+  .assemble-wrapper {
     position: relative;
     width: 600px;
     height: 500px;
     margin-top: 140px;
     z-index: 2;
     left: 90px;
-}
+  }
 
-.experience-badge {
+  .experience-badge {
     position: absolute;
     right: 20%;
     top: 20px;
     text-align: center;
     z-index: 4;
+  }
 }
+
+@media (max-width: 1024px) {
+  .content h2 {
+    font-size: 25px;
+  }
+  .content p {
+    font-size: 15px;
+  }
+  .experience-badge h3 {
+    font-size: 35px;
+  }
+  .experience-badge p {
+    font-size: 25px;
+  }
+  .read-more {
+    font-size: 18px;
+    padding: 6px 15px;
+  }
+  .plant-image img {
+    width: 150px;
+  }
+
+  .set-2 .assembled.lamp {
+    top: 49px;
+    left: -212px;
+    width: 545px;
+  }
+
+  .set-2 .assembled.floor {
+    bottom: 120px;
+    left: -213px;
+    width: 544px;
+  }
+  .set-2 .assembled.wallRight {
+    top: 103px;
+    right: -37px;
+    width: 275px;
+  }
+  .set-2 .assembled.wallLeft {
+    top: 100px;
+    left: -215px;
+    width: 350px;
+  }
+
+  .assembled.lamp {
+    top: 97px;
+    left: -214px;
+    width: 553px;
+  }
+  .assembled.sofa {
+    bottom: 56px;
+    left: -158px;
+    width: 465px;
+    z-index: 3;
+  }
+  .assembled.wallRight {
+    top: 141px;
+    right: -44px;
+    width: 273px;
+  }
+
+  .assembled.wallLeft {
+    top: 138px;
+    left: -215px;
+    width: 370px;
+  }
+
+  .assembled.floor {
+    bottom: 27px;
+    left: -214px;
+    width: 550px;
+  }
+  .assemble-wrapper {
+    margin-top: 65px;
+  }
+  .vector-bg {
+    top: 55%;
+    height: 90vh;
+  }
+  .about-assemble {
+    height: 100vh;
+    min-height: 0px;
+  }
 }

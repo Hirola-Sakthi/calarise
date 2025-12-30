@@ -39,36 +39,31 @@
   border-top: 3px solid rgba(255, 255, 255, 0.25);
   border-bottom: 3px solid rgba(255, 255, 255, 0.25);
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.1),      
-    inset 0 3px 8px rgba(255, 255, 255, 0.2),   
-    inset 0 -3px 8px rgba(255, 255, 255, 0.2),  
-    inset 0 0 20px rgba(0, 0, 0, 0.6);         
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  padding: 4px 35px;
+  padding: 4px 25px;
   border-radius: 30px;
   transition: all 0.3s ease;
   font-size: 20px;
 }
 
-@media(max-width:1024px){
-  .nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 4px 15px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  font-size: 18px;
-}
-}
+  .down-arrow{
+font-size: 18px;
+  }
 
 .nav-links a:hover {
   color: #a68167;
   text-decoration: underline;
 }
+
+
 
 /* More link */
 .more-link {
@@ -80,13 +75,15 @@
   font-weight: 500;
   color: #fff;
   font-size: 20px;
+   padding: 4px 10px;
+
 }
 
 .dropdown-item {
-  position: fixed; 
-  left: 70%;     
+  position: fixed;
+  left: 70%;
   transform: translateX(-50%);
-  width: 150px; 
+  width: 150px;
   padding: 10px 16px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
@@ -97,12 +94,12 @@
   border-top: 2px solid rgba(255, 255, 255, 0.25) !important;
   border-bottom: 2px solid rgba(255, 255, 255, 0.25) !important;
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.1),      
-    inset 0 3px 8px rgba(255, 255, 255, 0.2),   
-    inset 0 -3px 8px rgba(255, 255, 255, 0.2),  
-    inset 0 0 20px rgba(0, 0, 0, 0.4); 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
-  z-index: 9999; 
+  z-index: 9999;
 }
 
 .dropdown-item:hover {
@@ -136,6 +133,29 @@
   font-size: 22px;
   cursor: pointer;
   color: white;
+}
+
+
+
+@media(max-width:1024px) {
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+  .more-link{
+    padding: 4px 10px;
+
+  }
+    .logo {
+    width: 200px;
+  }
+  .down-arrow{
+font-size: 15px;
+  }
 }
 
 /* Responsive */
