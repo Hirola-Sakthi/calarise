@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.why-image-box {
+/* .why-image-box {
   width: 100%;
   max-width: 620px;
   height: 620px;
@@ -23,9 +23,9 @@
   margin: 0 auto;
   position: relative;
   box-shadow: 0 35px 60px rgba(0, 0, 0, 0.6);
-}
+} */
 
-.why-image-box::before {
+/* .why-image-box::before {
   content: "";
   position: absolute;
   left: 0;
@@ -55,15 +55,40 @@
   );
   z-index: 3;
   pointer-events: none;
-}
+} */
 
 .why-image-box img {
   width: 100%;
-  height: 100%;
+  max-width: min(620px, 100vw);
+  height: auto;
+
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  border-radius: clamp(16px, 3vw, 28px);
+
   display: block;
   position: relative;
   z-index: 1;
+
+  /* Bottom-only dark fade */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0.85) 80%,
+    rgba(0, 0, 0, 0.4) 90%,
+    rgba(0, 0, 0, 0) 98%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.85) 80%,
+    rgba(0, 0, 0, 0.4) 90%,
+    rgba(0, 0, 0, 0) 98%
+  );
 }
+
+
 
 .why-content-box {
   color: #ffffff;
@@ -114,7 +139,7 @@
 }
 
 .why-btn:hover {
-  background: #5B3F2A;
+  background: #5b3f2a;
   color: #fff;
   border: none;
   border-top: 3px solid transparent;
@@ -162,31 +187,30 @@
   }
 }
 
-
-@media(max-width:1024px){
-  .why-subtitle{
-  font-size: 20px;
-}
-.why-image-box{
-  max-width: 500px;
-  height: 500px;
-}
-.why-btn{
-  padding: 5px 15px;
-}
-.why-btn .text{
-  font-size: 19px;
-}
-.why-btn .icon{
-  font-size: 25px;
-}
-.why-image-box::after{
+@media (max-width: 1024px) {
+  .why-subtitle {
+    font-size: 20px;
+  }
+  .why-image-box {
+    max-width: 500px;
+    height: 500px;
+  }
+  .why-btn {
+    padding: 5px 15px;
+  }
+  .why-btn .text {
+    font-size: 19px;
+  }
+  .why-btn .icon {
+    font-size: 25px;
+  }
+  .why-image-box::after {
     background: linear-gradient(
-    to bottom,
-    rgba(16, 16, 16, 0) 60%,
-    rgba(16, 16, 16, 0.6) 90%,
-    rgba(16, 16, 16, 0.9) 95%,
-    #101010 100%
-  );
-}
+      to bottom,
+      rgba(16, 16, 16, 0) 60%,
+      rgba(16, 16, 16, 0.6) 90%,
+      rgba(16, 16, 16, 0.9) 95%,
+      #101010 100%
+    );
+  }
 }

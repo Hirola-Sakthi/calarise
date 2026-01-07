@@ -13,6 +13,7 @@ import AboutUs from "./components/AboutUs";
 import SplashCursor from "./components/SplashCursor";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Loader from "./components/Loader";
+import ProcessSection from "./components/ProcessSection";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <ServicesSection/>
       <AboutUs/>
       {/* <WhyChooseUs/> */}
+      <ProcessSection/>
       <Portfolio/>
       <MeetFounder/>
       <TestimonialSection/>

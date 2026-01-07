@@ -52,10 +52,41 @@ export default function Footer() {
             <div>
               <h4 className="footer-call">Follow us</h4>
               <div className="footer-icons">
-                <FaInstagram />
-                <FaFacebookF />
-                <FaLinkedinIn />
-                <FaXTwitter />
+                <a
+                  href="https://www.instagram.com/thecalaris?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+
+                <a
+                  href="https://www.facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/yourcompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedinIn />
+                </a>
+
+                <a
+                  href="https://twitter.com/yourhandle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter (X)"
+                >
+                  <FaXTwitter />
+                </a>
               </div>
             </div>
           </div>

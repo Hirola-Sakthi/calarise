@@ -1,0 +1,109 @@
+.process-section {
+  background: #101010;
+  padding: 40px 0 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.process-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/src/assets/images/pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.01;
+  z-index: 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.process-item {
+  text-align: center;
+  color: #eaeaea;
+}
+
+.process-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.process-icon img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.process-icon span {
+  font-size: 36px;
+}
+
+
+.process-item:hover .process-icon {
+  border-color: #ffffff;
+  transform: translateY(-6px);
+}
+
+.process-text {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  color: #cfcfcf;
+  font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-section {
+    padding: 60px 6%;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .process-icon span {
+    font-size: 30px;
+  }
+
+  .process-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}

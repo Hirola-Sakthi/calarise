@@ -154,11 +154,16 @@
 }
 
 /* ---------- RESPONSIVE ---------- */
+@media(max-width:1440px){
+ .founder-section{
+    height: 110vh;
+  }
+}
 
 @media (max-width: 1024px) {
 
   .founder-section{
-    height: 120vh;
+    height: 115vh;
   }
   .founder-text {
     font-size: 17px;

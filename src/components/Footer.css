@@ -98,6 +98,7 @@
 .footer-icons svg {
   cursor: pointer;
   transition: 0.3s;
+  color: #fff;
 }
 
 .footer-icons svg:hover {

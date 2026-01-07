@@ -17,7 +17,7 @@ export default function FloatingMenu() {
           <a href="https://wa.me/910000000000">
             <FaWhatsapp />
           </a>
-          <a href="https://wa.me/910000000000">
+          <a href="https://www.instagram.com/thecalaris?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
             <FaInstagram />
           </a>
         </div>

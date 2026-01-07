@@ -26,8 +26,9 @@
 .scroll-up {
   transform: translateY(50px);
   opacity: 0;
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-  transition-delay: 0s;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  transition-delay: var(--delay, 0s);
+  will-change: transform, opacity;
 }
 
 .scroll-up.active {
@@ -35,18 +36,6 @@
   opacity: 1;
 }
 
-.scroll-up:nth-child(1) {
-  transition-delay: 0.1s;
-}
-.scroll-up:nth-child(2) {
-  transition-delay: 0.3s;
-}
-.scroll-up:nth-child(3) {
-  transition-delay: 0.5s;
-}
-.scroll-up:nth-child(4) {
-  transition-delay: 0.7s;
-}
 
 .about-wrapper {
   position: relative;
@@ -314,6 +303,32 @@
   .set-2 .sofa {
     display: none;
   }
+  .assembled.wallLeft {
+    top: 78px;
+    left: -554px;
+    width: 700px;
+  }
+  .assembled.wallRight {
+    top: 75px;
+    right: -40px;
+    width: 585px;
+  }
+  .assembled.floor {
+    bottom: -244px;
+    left: -554px;
+    width: 1170px;
+  }
+  .assembled.sofa {
+    bottom: -65px;
+    left: -105px;
+    width: 650px;
+    z-index: 3;
+  }
+  .assembled.lamp {
+    top: -16px;
+    left: -554px;
+    width: 1192px;
+  }
 
   .assemble-wrapper {
     position: relative;
@@ -330,6 +345,67 @@
     top: 20px;
     text-align: center;
     z-index: 4;
+  }
+}
+
+@media (max-width: 1440px) {
+  .assembled.wallLeft {
+    top: 100px;
+    left: -215px;
+    width: 540px;
+  }
+  .assembled.wallRight {
+    top: 97px;
+    right: -178px;
+    width: 452px;
+  }
+  .assembled.floor {
+    bottom: -108px;
+    left: -214px;
+    width: 887px;
+  }
+  .assembled.sofa {
+    bottom: -65px;
+    left: -105px;
+    width: 650px;
+    z-index: 3;
+  }
+  .assembled.lamp {
+    top: 30px;
+    left: -216px;
+    width: 895px;
+  }
+
+  .set-2 .assembled.wallLeft {
+    top: 100px;
+    left: -215px;
+    width: 540px;
+  }
+  .set-2 .assembled.wallRight {
+    top: 97px;
+    right: -178px;
+    width: 441px;
+  }
+  .set-2 .assembled.floor {
+    bottom: -44px;
+    left: -213px;
+    width: 894px;
+  }
+  .set-2 .assembled.lamp {
+    top: 11px;
+    left: -212px;
+    width: 893px;
+  }
+  .set-2 .sofa {
+    display: none;
+  }
+    .vector-bg {
+    top: 51%;
+    height: 80vh;
+  }
+  .about-assemble {
+    height: 90vh;
+    min-height: 0px;
   }
 }
 
@@ -408,11 +484,12 @@
     margin-top: 65px;
   }
   .vector-bg {
-    top: 55%;
-    height: 90vh;
+    top: 53%;
+    height: 80vh;
   }
   .about-assemble {
-    height: 100vh;
+    height: 95vh;
     min-height: 0px;
   }
 }
+
