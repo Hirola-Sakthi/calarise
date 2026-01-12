@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FAQ.css";
+import "./faq.css";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
