@@ -1,16 +1,33 @@
+
 @font-face {
   font-family: "Allura";
-  src: url("./assets/fonts/Allura-Regular.ttf") format("truetype");
-  font-weight: 400; 
+  src: url("/src/assets/fonts/Allura-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+* {
   margin: 0;
-  font-family: "Allura";
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #101010;
+  color: #ffffff;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 
@@ -21,10 +38,13 @@ body {
   font-size: 48px;
   letter-spacing: 0.6px;
   line-height: 1.25;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
 }
 
 
-
-
+button,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}

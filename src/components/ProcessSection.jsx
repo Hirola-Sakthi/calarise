@@ -39,6 +39,7 @@ const processData = [
 export default function ProcessSection() {
   return (
     <section className="process-section">
+      <h2 className="process-title allura-font">Our Process</h2>
       <div className="process-grid">
         {processData.map((item, index) => (
           <div className="process-item" key={index}>

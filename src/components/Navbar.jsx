@@ -2,17 +2,23 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa";
 import logo from "../assets/images/logo.png";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 export default function NavbarComponent() {
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const moreOptions = ["Blog", "Testimonial", "FAQ", "Refferal"];
-  const servicesOptions = ["Commerical", "Residency", "Only Design"];
+  const moreOptions = ["Blog", "Testimonial", "FAQ", "Do More"];
+  const servicesOptions = [
+    "Residential",
+    "Commerical",
+    "Renovation",
+    "Turn Key",
+  ];
 
-  const moreRef = useRef();
-  const servicesRef = useRef();
+  const moreRef = useRef(null);
+  const servicesRef = useRef(null);
 
   // Close dropdowns if clicked outside
   useEffect(() => {
@@ -24,74 +30,79 @@ export default function NavbarComponent() {
         setServicesOpen(false);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <nav className="glass-navbar">
       <div className="nav-left">
-        <img src={logo} alt="Logo" className="logo" />
+        <Link to="/" className="logo-link">
+          <img src={logo} alt="Logo" className="logo" />
+        </Link>
       </div>
 
       <div className={`nav-links ${open ? "open" : ""}`}>
-        <a href="#home" className="home-link">
+        <Link to="/" className="home-link">
           Home
-        </a>
-        <a href="#about">About Us</a>
+        </Link>
 
-        {/* Services Dropdown */}
-        <div
-          className="more-link"
-          ref={servicesRef}
-          onClick={() => setServicesOpen(!servicesOpen)}
-        >
-          Services <FaChevronDown className="down-arrow" />
+        <Link to="/about-us">About</Link>
+
+        {/* SERVICES DROPDOWN */}
+        <div ref={servicesRef} style={{ position: "relative" }}>
+          <div
+            className="more-link"
+            onClick={() => setServicesOpen(!servicesOpen)}
+          >
+            Services <FaChevronDown className="down-arrow" />
+          </div>
+
+          {servicesOpen &&
+            servicesOptions.map((option, idx) => (
+              <Link
+                key={idx}
+                to={`/services/${option.toLowerCase().replace(/\s+/g, "-")}`}
+                className="dropdown-item"
+                style={{
+                  top: `${60 + idx * 50}px`,
+                  left: "80px",
+                  width: "170px",
+                  position: "absolute",
+                }}
+                onClick={() => setServicesOpen(false)}
+              >
+                {option}
+              </Link>
+            ))}
         </div>
-        {servicesOpen &&
-          servicesOptions.map((option, idx) => (
-            <a
-              key={idx}
-              href={`#${option.toLowerCase().replace(" ", "")}`}
-              className="dropdown-item"
-              style={{
-                top: `${70 + idx * 50}px`,
-                left: "380px",
-                width: "170px",
-                position: "absolute",
-              }}
-            >
-              {option}
-            </a>
-          ))}
 
         <a href="#gallery">Gallery</a>
-        {/* More Dropdown */}
-        <div
-          className="more-link"
-          ref={moreRef}
-          onClick={() => setMoreOpen(!moreOpen)}
-        >
-          More <FaChevronDown className="down-arrow" />
+
+        {/* MORE DROPDOWN */}
+        <div ref={moreRef} style={{ position: "relative" }}>
+          <div className="more-link" onClick={() => setMoreOpen(!moreOpen)}>
+            More <FaChevronDown className="down-arrow" />
+          </div>
+
+          {moreOpen &&
+            moreOptions.map((option, idx) => (
+              <Link
+                key={idx}
+                to={`/${option.toLowerCase().replace(/\s+/g, "-")}`}
+                className="dropdown-item"
+                style={{ top: `${70 + idx * 50}px`, width: "170px" }}
+                onClick={() => setMoreOpen(false)}
+              >
+                {option}
+              </Link>
+            ))}
         </div>
 
-        {moreOpen &&
-          moreOptions.map((option, idx) => (
-            <a
-              key={idx}
-              href={`#${option.toLowerCase().replace(" ", "")}`}
-              className="dropdown-item"
-              style={{ top: `${70 + idx * 50}px`, width: "170px" }}
-            >
-              {option}
-            </a>
-          ))}
-
-        <a href="#contact" className="contact-link">
+        <Link to="/contact" className="contact-link">
           Contact
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu Icon */}

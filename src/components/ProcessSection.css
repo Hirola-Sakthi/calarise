@@ -18,6 +18,15 @@
   z-index: 0;
 }
 
+.process-title {
+  color: white;
+  font-size: 55px;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+  font-weight: 300;
+  text-align: center;
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

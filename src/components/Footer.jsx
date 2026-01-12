@@ -1,7 +1,7 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Logo from "../assets/images/logo.png"; // adjust path if needed
+import Logo from "../assets/images/logo.png";
 import "./Footer.css";
 
 export default function Footer() {
@@ -21,7 +21,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Middle Menu */}
         <div className="footer-menu">
           <a href="#">Home</a>
           <a href="#">About Us</a>
@@ -31,7 +30,6 @@ export default function Footer() {
           <a href="#">Contact Us</a>
         </div>
 
-        {/* Newsletter / Contact */}
         <div className="footer-right">
           <p className="footer-title">
             Subscribe to stay tuned for new web design and latest updates. Let’s
@@ -46,58 +44,59 @@ export default function Footer() {
           <div className="footer-contact-row">
             <div>
               <h4 className="footer-call">Call us</h4>
-              <p>+1 800 854-36-80</p>
+              <p>
+                <a href="tel:+919845921706" className="phone-link">
+                  +91 9845921706
+                </a>
+              </p>
             </div>
 
             <div>
               <h4 className="footer-call">Follow us</h4>
               <div className="footer-icons">
                 <a
-                  href="https://www.instagram.com/thecalaris?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  href="https://www.instagram.com/thecalaris"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
                 >
                   <FaInstagram />
                 </a>
-
                 <a
                   href="https://www.facebook.com/yourpage"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook"
                 >
                   <FaFacebookF />
                 </a>
-
                 <a
                   href="https://www.linkedin.com/company/yourcompany"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
                 >
                   <FaLinkedinIn />
                 </a>
-
                 <a
                   href="https://twitter.com/yourhandle"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Twitter (X)"
                 >
                   <FaXTwitter />
                 </a>
               </div>
             </div>
           </div>
+          <div className="footer-mail-center">
+            <h4 className="footer-call">Mail us</h4>
+            <a href="mailto:thecalaris.interiors@gmail.com" className="email-link">
+              thecalaris.interiors@gmail.com
+            </a>
+          </div>
         </div>
       </div>
-
-      {/* Bottom bar */}
       <hr className="footer-divider" />
 
       <div className="footer-bottom">
-        <p>© 2021 All Rights Reserved</p>
+        <p>© 2026 All Rights Reserved</p>
         <div className="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
