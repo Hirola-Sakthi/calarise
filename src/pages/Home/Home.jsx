@@ -1,7 +1,5 @@
 import React from "react";
-import SplashCursor from "../../components/SplashCursor";
 import Banner from "../../components/Banner";
-import FloatingMenu from "../../components/SocialFloating";
 import ServicesSection from "../../components/ServicesSection";
 import AboutUs from "../../components/AboutUs";
 import ProcessSection from "../../components/ProcessSection";
@@ -16,9 +14,7 @@ export default function Home() {
   return (
     <>
     <NavbarComponent/>
-      <SplashCursor />
       <Banner />
-      <FloatingMenu />
       <ServicesSection />
       <AboutUs />
       <ProcessSection />
