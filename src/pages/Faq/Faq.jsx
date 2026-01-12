@@ -3,6 +3,11 @@ import "./Faq.css";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Testimonial1 from "../../assets/images/testimonial-img-1.webp";
+import Testimonial2 from "../../assets/images/testimonial-img-2.webp";
+
+
+
 
 const faqData = [
   {
@@ -63,7 +68,7 @@ const FAQ = () => {
               and process better.
             </p>
 
-            <img src="/src/assets/images/testimonial-img-1.webp" alt="Interior" />
+            <img src={Testimonial1} alt="Interior" />
           </div>
           <div className="faq-right">
             {faqData.map((item, index) => (
@@ -89,7 +94,7 @@ const FAQ = () => {
           </div>
         </div>
         <div className="faq-bottom">
-          <img src="/src/assets/images/testimonial-img-2.webp" alt="Living Room" />
+          <img src={Testimonial2} alt="Living Room" />
         </div>
       </div>
     </section>
