@@ -44,7 +44,7 @@
 .faq-container {
   max-width: 1300px;
   margin: 120px auto 0;
-  padding: 40px 20px;
+  padding: 0px 20px;
 }
 
 .faq-row {
@@ -55,8 +55,9 @@
 }
 
 .faq-left h3 {
-  font-size: 34px;
+  font-size: 44px;
   margin-bottom: 14px;
+  font-family: "Allura", cursive !important;
 }
 
 .faq-left p {
