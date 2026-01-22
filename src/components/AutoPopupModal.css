@@ -1,0 +1,61 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-modal {
+  background: #101010;
+  padding: 30px;
+  width: 550px;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.popup-modal h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.popup-row {
+  display: flex;
+  gap: 10px;
+}
+
+.popup-modal input,
+.popup-modal textarea {
+  width: 100%;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  padding: 12px;
+  margin-bottom: 12px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.popup-submit {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  color: #101010;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}

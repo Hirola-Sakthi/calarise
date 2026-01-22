@@ -4,24 +4,23 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "./ServicesSection.css";
 
 import img1 from "../assets/images/home-slider-1.webp";
 import img2 from "../assets/images/home-slider-2.webp";
 import img3 from "../assets/images/home-slider-3.webp";
 import img4 from "../assets/images/home-slider-4.webp";
-import img5 from "../assets/images/home-slider-1.webp";
-import img6 from "../assets/images/home-slider-2.webp";
+// import img5 from "../assets/images/home-slider-1.webp";
+// import img6 from "../assets/images/home-slider-2.webp";
 
 export default function ServicesSection() {
   const items = [
-    { img: img1, title: "Living Area" },
-    { img: img2, title: "Kids Bed Room" },
-    { img: img3, title: "Commercial Space" },
-    { img: img4, title: "Dining Area" },
-    { img: img5, title: "Foyer" },
-    { img: img6, title: "Renovation" },
+    { img: img1, title: "Residential" },
+    { img: img2, title: "Commercial" },
+    { img: img3, title: "Renovation" },
+    { img: img4, title: "Trun Key" },
+    { img: img1, title: "Residential" },
+    { img: img2, title: "Commercial" },
   ];
 
   return (

@@ -36,16 +36,12 @@
   opacity: 1;
 }
 
-
 .about-wrapper {
   position: relative;
   background: #101010;
   overflow: hidden;
 }
 
-/* =========================
-   VECTOR BACKGROUND LAYER
-========================= */
 .vector-bg {
   position: absolute;
   left: 50%;
@@ -399,7 +395,7 @@
   .set-2 .sofa {
     display: none;
   }
-    .vector-bg {
+  .vector-bg {
     top: 51%;
     height: 80vh;
   }
@@ -493,3 +489,72 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about-assemble {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 20px;
+    height: auto;
+    min-height: auto;
+    gap: 40px;
+  }
+  .assemble-wrapper {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    margin-top: -90px;
+    z-index: 2;
+    left: 245px;
+  }
+  .plant-image {
+    display: none;
+  }
+  .content {
+    max-width: 703px;
+    z-index: 3;
+    position: relative;
+    top: -35px;
+  }
+  .set-2 .assembled.wallRight {
+    top: 103px;
+    right: 268px;
+    width: 275px;
+  }
+  .assembled.wallRight {
+    top: 141px;
+    right: 261px;
+    width: 273px;
+  }
+
+  .assembled.lamp {
+        top: 60px;
+        left: -214px;
+        width: 553px;
+    }
+        .assembled.wallLeft {
+        top: 102px;
+        left: -215px;
+        width: 350px;
+    }
+        .assembled.wallRight {
+        top: 104px;
+        right: 262px;
+        width: 246px;
+    }
+        .assembled.floor {
+        bottom: 87px;
+        left: -214px;
+        width: 550px;
+    }
+        .assembled.sofa {
+        bottom: 115px;
+        left: -158px;
+        width: 445px;
+        z-index: 3;
+    }
+  .vector-bg {
+    top: 40%;
+    height: 80vh;
+  }
+}

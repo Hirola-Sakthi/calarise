@@ -31,14 +31,11 @@ export default function Footer() {
         </div>
 
         <div className="footer-right">
-          <p className="footer-title">
-            Subscribe to stay tuned for new web design and latest updates. Let’s
-            do it!
-          </p>
-
-          <div className="footer-subscribe">
-            <input type="email" placeholder="Enter your email Address" />
-            <button>Subscribe</button>
+          <div className="footer-mail-center">
+            <h4 className="footer-call">Mail us</h4>
+            <a href="mailto:thecalaris.interiors@gmail.com" className="email-link">
+              thecalaris.interiors@gmail.com
+            </a>
           </div>
 
           <div className="footer-contact-row">
@@ -84,12 +81,6 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="footer-mail-center">
-            <h4 className="footer-call">Mail us</h4>
-            <a href="mailto:thecalaris.interiors@gmail.com" className="email-link">
-              thecalaris.interiors@gmail.com
-            </a>
           </div>
         </div>
       </div>

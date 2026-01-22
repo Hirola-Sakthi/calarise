@@ -3,13 +3,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
 import "./App.css";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import FAQ from "./pages/Faq/Faq";
 import NotFound from "./pages/404/404";
 import DoMore from "./pages/DoMore/DoMore";
 import SplashCursor from "./components/SplashCursor";
 import FloatingMenu from "./components/SocialFloating";
+import Residential from "./pages/Residential/Residential";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import Testimonials from "./pages/Testimonials/Testimonials";
+import Blog from "./pages/Blog/Blog";
+import PageScrollToTop from "./pages/PageScrollToTop/PageScrollToTop";
+import BlogDetails from "./pages/Blog/BlogDetails";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -17,7 +22,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -25,14 +30,20 @@ function App() {
 
   return (
     <BrowserRouter>
+    <PageScrollToTop />
       <SplashCursor />
       <FloatingMenu />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about-us" element={<About />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/do-more" element={<DoMore />} />
+        <Route path="/services" element={<Residential />} />
+        <Route path="/about-us" element={<AboutPage />} />
+        <Route path="/testimonial" element={<Testimonials />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogDetails />} />
+
 
         <Route path="*" element={<NotFound />} />
       </Routes>

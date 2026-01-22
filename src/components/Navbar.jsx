@@ -50,33 +50,7 @@ export default function NavbarComponent() {
 
         <Link to="/about-us">About</Link>
 
-        {/* SERVICES DROPDOWN */}
-        <div ref={servicesRef} style={{ position: "relative" }}>
-          <div
-            className="more-link"
-            onClick={() => setServicesOpen(!servicesOpen)}
-          >
-            Services <FaChevronDown className="down-arrow" />
-          </div>
-
-          {servicesOpen &&
-            servicesOptions.map((option, idx) => (
-              <Link
-                key={idx}
-                to={`/services/${option.toLowerCase().replace(/\s+/g, "-")}`}
-                className="dropdown-item"
-                style={{
-                  top: `${60 + idx * 50}px`,
-                  left: "80px",
-                  width: "170px",
-                  position: "absolute",
-                }}
-                onClick={() => setServicesOpen(false)}
-              >
-                {option}
-              </Link>
-            ))}
-        </div>
+        <Link to="/services">Services</Link>
 
         <a href="#gallery">Gallery</a>
 

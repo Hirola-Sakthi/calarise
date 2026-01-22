@@ -1,19 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DoMore.css";
 import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function DoMore() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_uizmkco",
+        "template_08inae1",
+        {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        "0Nu9qGlYuCwwT9Ywn",
+      )
+
+      .then(() => {
+        return emailjs.send(
+          "service_uizmkco",
+          "template_70ecmbb",
+          {
+            user_name: `${formData.firstName} ${formData.lastName}`,
+            user_email: formData.email,
+            title: "Contact Request",
+          },
+          "0Nu9qGlYuCwwT9Ywn",
+        );
+      })
+
+      .then(() => {
+        toast.success("Message sent successfully!", {
+          position: "top-right",
+          autoClose: 3000,
+        });
+
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      })
+
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+
+        toast.error("Failed to send message. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+        });
+      })
+
+      .finally(() => setLoading(false));
+  };
   return (
     <>
-    <NavbarComponent/>
+      <NavbarComponent />
       <section class="refer-section">
-              <div className="refer-banner">
-        <div className="refer-overlay"></div>
-        <div className="banner-title">
-          <span className="allura-font">Do More</span>
+        <ToastContainer />
+        <div className="refer-banner">
+          <div className="refer-overlay"></div>
+          <div className="banner-title">
+            <span className="allura-font">Do More</span>
+          </div>
         </div>
-      </div>
         <div class="refer-header">
           <h2 className="allura-font">Refer & Earn</h2>
           <p>
@@ -54,17 +129,59 @@ export default function DoMore() {
         </div>
 
         <div class="refer-image-section">
-          <div class="refer-form">
-            <input type="text" placeholder="First Name *" />
-            <input type="text" placeholder="Last Name" />
-            <input type="tel" placeholder="Phone Number *" />
-            <input type="email" placeholder="Email *" />
-            <input type="text" placeholder="Name of Friend / Family" />
-            <button>SUBMIT</button>
+          <div class="refer-form-wrapper">
+            <form class="refer-form" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name*"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name*"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email*"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number*"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+
+              <textarea
+                placeholder="Message*"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="4"
+              ></textarea>
+
+              <button type="submit" disabled={loading}>
+                {loading ? "Sending..." : "Submit"}
+              </button>
+            </form>
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }

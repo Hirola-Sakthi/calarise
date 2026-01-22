@@ -1,0 +1,387 @@
+
+.residential-section {
+  background: #101010;
+  color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.residential-banner {
+  height: 95vh;
+  background: url("/src/assets/images/testimonial-banner.webp") center/cover
+    no-repeat;
+  position: relative;
+}
+
+.about-page-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 35%;
+  background: linear-gradient(
+    to top,
+    rgba(16, 16, 16, 1),
+    rgba(16, 16, 16, 0.7),
+    rgba(16, 16, 16, 0)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.banner-title {
+  position: absolute;
+  bottom: -30px;
+  left: 6%;
+  z-index: 5;
+}
+
+.banner-title span {
+  background: #5b3f2a;
+  padding: 14px 50px;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+}
+
+.residential-content {
+  padding: 40px 6% 40px;
+}
+.residential-second-content {
+  padding: 40px 6% 40px;
+}
+
+.residential-content {
+  scroll-margin-top: 120px; 
+}
+
+.liquid-tabs-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  /* margin: 70px auto 90px;
+  max-width: 900px; */
+  flex-wrap: wrap;
+  margin-top: 110px;
+  margin-bottom: 40px;
+}
+
+.liquid-tab {
+  font-size: 20px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  background: rgb(38 37 37 / 8%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35),
+    inset 0 4px 10px rgb(200 200 200 / 20%),
+    inset 0 -4px 10px rgb(130 130 130 / 25%), inset 0 0 22px rgba(0, 0, 0, 0);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.liquid-tab.active {
+  background: #a68167;
+  color: #fff;
+  border: none;
+  transform: translateY(-2px);
+  box-shadow: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.liquid-tab:hover {
+  background: #a68167;
+  color: #fff;
+  border: none;
+  transform: translateY(-3px);
+  box-shadow: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.res-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.res-row.reverse {
+  align-items: center;
+}
+
+.res-images-wrap {
+  display: flex;
+  gap: 22px;
+}
+
+.res-images-small {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 38%;
+}
+
+.res-images-small img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.res-images-large {
+  width: 62%;
+}
+
+.res-images-large img {
+  width: 100%;
+  height: 422px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.res-text h3 {
+  font-size: 50px;
+  font-family: "Allura", cursive !important;
+  margin-bottom: 20px;
+}
+
+.res-text p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #b5b5b5;
+}
+
+.res-image-arrow {
+  position: relative;
+}
+
+.res-image-arrow img {
+  width: 100%;
+  border-radius: 26px;
+}
+
+
+.residential-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+  color: #b5b5b5;
+}
+
+.residential-list {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.residential-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #b5b5b5;
+}
+
+
+/* ===== GLASSY LIQUID BG ===== */
+/* .liquid-bg {
+  position: absolute;
+  bottom: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 180px;
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.55),
+    rgba(202, 161, 106, 0.25),
+    rgba(255, 255, 255, 0.15)
+  );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 48% 52% 60% 40% / 55% 45% 55% 45%;
+  animation: liquidBlob 6s ease-in-out infinite;
+  z-index: 1;
+} */
+
+.liquid-arrows {
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 26px;
+  z-index: 3;
+}
+
+.liquid-arrow-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  /* border-top: 3px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.35); */
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35),
+    inset 0 4px 10px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 10px rgba(255, 255, 255, 0.25), inset 0 0 22px rgba(0, 0, 0, 0);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.liquid-arrow-btn svg {
+  font-size: 26px;
+  color: #fff;
+}
+
+.liquid-arrow-btn.left {
+  animation-delay: 0s;
+}
+
+.liquid-arrow-btn.right {
+  animation-delay: 0.6s;
+}
+
+.liquid-arrow-btn:hover {
+  transform: scale(1.08);
+}
+
+/* @keyframes liquidFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+/* 
+@keyframes liquidBlob {
+  0% {
+    border-radius: 48% 52% 60% 40% / 55% 45% 55% 45%;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    border-radius: 55% 45% 50% 50% / 45% 55% 45% 55%;
+    transform: translateX(-50%) translateY(14px);
+  }
+  100% {
+    border-radius: 48% 52% 60% 40% / 55% 45% 55% 45%;
+    transform: translateX(-50%) translateY(0);
+  }
+} */
+
+.scroll-up-btn {
+  position: fixed;
+  bottom: 150px;
+  right: 35px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(38 37 37 / 8%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35),
+    inset 0 4px 10px rgb(200 200 200 / 20%),
+    inset 0 -4px 10px rgb(130 130 130 / 25%), inset 0 0 22px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn svg {
+  font-size: 26px;
+  color: #fff;
+}
+
+.scroll-up-btn:hover {
+  background: #a68167;
+  color: #fff;
+  border: none;
+  transform: translateY(-3px);
+  box-shadow: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.liquid-tabs-wrap {
+  scroll-margin-top: 180px;
+}
+
+
+@media (max-width: 992px) {
+  .res-row {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .res-row.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .res-images-wrap {
+    flex-direction: column;
+  }
+
+  .res-images-small,
+  .res-images-large {
+    width: 100%;
+  }
+
+  .liquid-bg {
+    width: 220px;
+    height: 150px;
+    bottom: -120px;
+  }
+
+  .liquid-arrows {
+    bottom: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .res-text h3 {
+    font-size: 28px;
+  }
+
+  .banner-title span {
+    font-size: 28px;
+    padding: 10px 30px;
+  }
+
+  .liquid-arrow-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .liquid-arrow-btn svg {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-up-btn {
+    width: 54px;
+    height: 54px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .scroll-up-btn svg {
+    font-size: 22px;
+  }
+}

@@ -8,6 +8,7 @@ import MeetFounder from "../../components/MeetFounder";
 import TestimonialSection from "../../components/TestimonialSection";
 import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import AutoPopupModal from "../../components/AutoPopupModal";
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <MeetFounder />
       <TestimonialSection />
       <Footer/>
+      <AutoPopupModal/>
     </>
   );
 }
