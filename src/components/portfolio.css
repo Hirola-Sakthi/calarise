@@ -46,7 +46,6 @@
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
 }
 
-
 .swiper,
 .swiper-wrapper,
 .swiper-slide {
@@ -62,7 +61,6 @@
   border-radius: 32px;
 }
 
-
 .media-buttons {
   position: absolute;
   bottom: 90px;
@@ -73,12 +71,11 @@
   z-index: 20;
 }
 
-
 .media-buttons button {
   display: flex;
   align-items: center;
-  gap: 32px;
-  padding: 12px 28px;
+  gap: 28px;
+  padding: 10px 28px;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(3px);
@@ -179,8 +176,8 @@
     align-items: center;
   }
 
- .portfolio-card  .swiper-slide img,
- .portfolio-card .swiper-slide video {
+  .portfolio-card .swiper-slide img,
+  .portfolio-card .swiper-slide video {
     width: 90%;
     height: 600px;
   }
@@ -197,6 +194,7 @@
 
   .portfolio-card {
     aspect-ratio: 4 / 3;
+    max-width: 95%;
   }
 
   .media-buttons {
@@ -209,16 +207,62 @@
     padding: 8px 18px;
     font-size: 16px;
   }
+  .portfolio-card .swiper-slide img, .portfolio-card .swiper-slide video{
+    width: 100%;
+  }
+  .portfolio-card .swiper-pagination{
+    bottom: 10px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .portfolio-section {
+    width: 100vw;
+    padding: 46px 0 80px;
+    min-height: 65vh;
+  }
+  .portfolio-card {
+    max-width: 95%;
+  }
+  .portfolio-card .swiper-slide img,
+  .portfolio-card .swiper-slide video {
+    width: 100%;
+  }
+  .media-buttons {
+    bottom: 30px !important;
+  }
+  .portfolio-card .swiper-pagination {
+    bottom: 0px !important;
+  }
+  .icon-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+  .media-buttons button svg {
+    font-size: 15px;
+  }
+  .portfolio-card .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: white;
+  opacity: 0.4;
+  margin: 0 6px !important;
+  transition: 0.3s ease;
+}
+
+.portfolio-card .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white !important;
+  width: 10px !important;
+  height: 10px !important;
+  transform: scale(1.2);
+}
 }
 
 @media (max-width: 480px) {
   .portfolio-card {
     aspect-ratio: 3 / 2;
     border-radius: 16px;
-  }
-
-  .media-buttons {
-    bottom: 40px;
   }
 
   .media-buttons button {

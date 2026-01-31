@@ -95,9 +95,8 @@
   height: 13px !important;
 }
 
-
-@media(max-width:1024px){
-  .banner-content h1{
+@media (max-width: 1024px) {
+  .banner-content h1 {
     font-size: 40px;
   }
 }
@@ -115,5 +114,35 @@
   .banner-social-fixed {
     right: 20px;
     gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo {
+    width: 140px !important;
+  }
+  .banner-section {
+    height: 70vh;
+  }
+  .custom-pagination {
+    transform: translateX(30%) !important;
+  }
+  .custom-pagination .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background: #fff;
+    opacity: 1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .custom-pagination .swiper-pagination-bullet-active {
+    background: #fff !important;
+    transform: scale(1.5);
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .banner-content h1 {
+    font-size: 20px;
   }
 }

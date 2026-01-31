@@ -3,13 +3,12 @@ import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../assets/images/logo.png";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="footer-container">
       <div className="footer-wrapper">
-        {/* Left Text */}
-        {/* Left Text */}
         <div className="footer-about">
           <img src={Logo} alt="Company Logo" className="footer-logo" />
 
@@ -20,20 +19,22 @@ export default function Footer() {
             unique story.
           </p>
         </div>
-
         <div className="footer-menu">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Services</a>
-          <a href="#">Pricing</a>
-          <a href="#">Gallery</a>
-          <a href="#">Contact Us</a>
+          <Link to="/">Home</Link>
+          <Link to="/about-us">About Us</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact Us</Link>
         </div>
 
         <div className="footer-right">
           <div className="footer-mail-center">
             <h4 className="footer-call">Mail us</h4>
-            <a href="mailto:thecalaris.interiors@gmail.com" className="email-link">
+            <a
+              href="mailto:thecalaris.interiors@gmail.com"
+              className="email-link"
+            >
               thecalaris.interiors@gmail.com
             </a>
           </div>

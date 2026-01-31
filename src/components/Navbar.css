@@ -1,4 +1,4 @@
-/* Glass navbar base */
+
 .glass-navbar {
   position: fixed;
   top: 0px;
@@ -26,7 +26,6 @@
   object-fit: contain;
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -64,8 +63,6 @@ font-size: 18px;
 }
 
 
-
-/* More link */
 .more-link {
   position: relative;
   display: flex;
@@ -109,9 +106,6 @@ font-size: 18px;
   box-shadow: none;
 }
 
-
-
-/* Contact link */
 .contact-link {
   margin-left: 30px;
   background: #b5b0aa;
@@ -127,7 +121,6 @@ font-size: 18px;
   text-decoration: none !important;
 }
 
-/* Mobile nav */
 .menu-icon-mobile {
   display: none;
   font-size: 22px;
@@ -176,7 +169,6 @@ font-size: 15px;
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -198,5 +190,17 @@ font-size: 15px;
     position: relative;
     top: 0;
     left: 0;
+  }
+}
+
+@media(max-width:540px){
+  .glass-navbar{
+    top: -30px;
+  }
+}
+
+@media(max-width:430px){
+  .glass-navbar{
+        padding-right: 20px;
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Contact.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NavbarComponent from "../../components/Navbar";
@@ -23,63 +23,34 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    emailjs
-      .send(
-        "service_uizmkco",
-        "template_08inae1",
-        {
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
-        "0Nu9qGlYuCwwT9Ywn"
-      )
+  try {
+    await axios.post("http://localhost:5000/contact", formData);
 
-      .then(() => {
-        return emailjs.send(
-          "service_uizmkco",
-          "template_70ecmbb",
-          {
-            user_name: `${formData.firstName} ${formData.lastName}`,
-            user_email: formData.email,
-            title: "Contact Request",
-          },
-          "0Nu9qGlYuCwwT9Ywn"
-        );
-      })
+    toast.success("Message sent successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
 
-      .then(() => {
-        toast.success("Message sent successfully!", {
-          position: "top-right",
-          autoClose: 3000,
-        });
-
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      })
-
-      .catch((err) => {
-        console.error("EmailJS Error:", err);
-
-        toast.error("Failed to send message. Please try again.", {
-          position: "top-right",
-          autoClose: 3000,
-        });
-      })
-
-      .finally(() => setLoading(false));
-  };
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  } catch (error) {
+    toast.error("Failed to send message. Please try again.", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>
@@ -156,7 +127,7 @@ const Contact = () => {
           <div className="contact-map">
             <iframe
               title="map"
-              src="https://www.google.com/maps?q=Bengaluru&output=embed"
+              src="https://www.google.com/maps?q=13.0712654,77.6199163&z=15&output=embed"
               loading="lazy"
             />
 
