@@ -116,3 +116,16 @@
     height: 40px;
   }
 }
+
+@media(max-width:540px){
+  .process-section{
+    width: 100vw;
+  }
+  .process-title{
+    font-size: 30px;
+    margin-top: -30px;
+  }
+  .process-text{
+    font-size: 13px;
+  }
+}

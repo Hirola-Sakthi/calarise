@@ -49,20 +49,15 @@ export default function TestimonialSection() {
       </h2>
 
       <div className="ts-content">
-        {/* LEFT ARROW */}
         <button className="ts-arrow ts-arrow-left" onClick={handlePrev}>
           <FaAngleLeft size={28} />
         </button>
-
-        {/* IMAGE */}
         <div className="ts-card">
           <img src={image} alt="Client" className="ts-image" />
           <button className="ts-play">
             <FaPlay />
           </button>
         </div>
-
-        {/* TEXT */}
         <div className="ts-text-area">
           <p className="ts-text">{text}</p>
 
@@ -74,8 +69,6 @@ export default function TestimonialSection() {
             </div>
           </div>
         </div>
-
-        {/* RIGHT ARROW */}
         <button className="ts-arrow ts-arrow-right" onClick={handleNext}>
           <FaAngleRight size={28} />
         </button>

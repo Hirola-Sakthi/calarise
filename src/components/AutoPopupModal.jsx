@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AutoPopupModal.css";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -21,7 +21,7 @@ const AutoPopupModal = () => {
     const startTimer = () => {
       timer = setTimeout(() => {
         setShow(true);
-      }, 60000);
+      }, 30000);
     };
 
     startTimer();
@@ -33,7 +33,7 @@ const AutoPopupModal = () => {
     setShow(false);
     setTimeout(() => {
       setShow(true);
-    }, 60000);
+    }, 30000);
   };
 
   if (!show) return null;
@@ -42,63 +42,38 @@ const AutoPopupModal = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        "service_uizmkco",
-        "template_08inae1",
-        {
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
-        "0Nu9qGlYuCwwT9Ywn",
-      )
+    try {
+      await axios.post("http://localhost:5000/contact", formData);
 
-      .then(() => {
-        return emailjs.send(
-          "service_uizmkco",
-          "template_70ecmbb",
-          {
-            user_name: `${formData.firstName} ${formData.lastName}`,
-            user_email: formData.email,
-            title: "Contact Request",
-          },
-          "0Nu9qGlYuCwwT9Ywn",
-        );
-      })
-
-      .then(() => {
-        toast.success("Message sent successfully!", {
-          position: "top-right",
-          autoClose: 3000,
-        });
+      toast.success("Message sent successfully!", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      setTimeout(() => {
         setShow(false);
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      })
-
-      .catch((err) => {
-        console.error("EmailJS Error:", err);
-
-        toast.error("Failed to send message. Please try again.", {
-          position: "top-right",
-          autoClose: 3000,
-        });
+      }, 3000);
+    } catch (error) {
+      toast.error("Failed to send message. Please try again.", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+      setTimeout(() => {
         setShow(false);
-      })
-
-      .finally(() => setLoading(false));
+      }, 3000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
