@@ -296,9 +296,16 @@
     margin-top: 140px;
 }
 } */
+
+@media (min-width: 429px) and (max-width: 529px) {
+.founder-section {
+    height: 110vh;
+}
+}
+
 @media (min-width: 376px) and (max-width: 420px) {
 .founder-section {
-    height: 105vh;
+    height: 110vh;
 }
 }
 
