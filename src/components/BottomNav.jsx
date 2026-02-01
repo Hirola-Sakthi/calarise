@@ -11,7 +11,7 @@ export default function BottomNav() {
         <SiSmartthings  size={22} />
         <span>About</span>
       </a>
-      <a href="tel:+919876543210" className="call-btn">
+      <a href="tel:+919845921706" className="call-btn">
         <FaPhoneAlt size={26} />
       </a>
       <a href="/contact" className="nav-item">
