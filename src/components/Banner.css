@@ -146,3 +146,9 @@
     font-size: 20px;
   }
 }
+
+  @media (min-width: 320px) and (max-width: 540px) {
+  .custom-pagination {
+    transform: translateX(35%) !important;
+  }
+}
