@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdDesignServices } from "react-icons/md";
-import "./bottomNav.css";
+import "./BottomNav.css";
 import { SiSmartthings } from "react-icons/si";
 
 export default function BottomNav() {
