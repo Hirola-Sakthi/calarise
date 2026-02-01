@@ -16,19 +16,6 @@ const sendFaqMail = async ({ question, userEmail, userName }) => {
         <p>${question}</p>
       `,
     }),
-
-    userEmail && resend.emails.send({
-      from: "Calaris <onboarding@resend.dev>",
-      to: userEmail,
-      subject: "Thank you for submitting your question",
-      html: `
-        Hi ${userName || "there"},<br/><br/>
-        Thank you for submitting your question!<br/>
-        We have received it and will get back to you shortly.<br/><br/>
-        Best Regards,<br/>
-        The Calaris Interiors Team
-      `,
-    }),
   ]);
 };
 
