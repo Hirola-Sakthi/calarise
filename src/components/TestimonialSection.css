@@ -80,6 +80,7 @@
   object-fit: cover;
   border-radius: 15px;
   display: block;
+  z-index: 1;
 }
 
 .ts-play {
@@ -98,6 +99,8 @@
   justify-content: center;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 10;           
+  pointer-events: auto;
 }
 
 .ts-play:hover {

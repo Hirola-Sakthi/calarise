@@ -3,27 +3,30 @@ import { FaAngleLeft, FaAngleRight, FaPlay } from "react-icons/fa";
 import "./TestimonialSection.css";
 
 import profilePic1 from "../assets/images/testimonial-image.webp";
-import profilePic2 from "../assets/images/testimonial-image.webp";
-import profilePic3 from "../assets/images/testimonial-image.webp";
+import profilePic2 from "../assets/images/testimonial-common-dp-img.webp";
+import profilePic3 from "../assets/images/testimonial-common-dp-img.webp";
+import profilePic4 from "../assets/images/testimonial-common-dp-img.webp";
+
+import { Link } from "react-router-dom";
 
 const testimonialData = [
   {
-    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud."`,
-    author: "Sameer Rai",
+    text: `"Calarise Interiors transformed our apartment beautifully. The design was elegant, functional, and perfectly aligned with our lifestyle. The team was extremely professional and transparent throughout."`,
+    author: "Arjun Raghavan",
     rating: "★★★★★",
-    image: profilePic1,
-  },
-  {
-    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud."`,
-    author: "Ananya Sharma",
-    rating: "★★★★☆",
     image: profilePic2,
   },
   {
-    text: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud."`,
-    author: "Rahul Mehta",
+    text: `"From concept to execution, Calarise Interiors exceeded my expectations. The attention to detail and material quality truly reflect a premium interior brand."`,
+    author: "Sneha Iyer",
     rating: "★★★★★",
     image: profilePic3,
+  },
+  {
+    text: `"The interiors reflect warmth, elegance, and thoughtful planning. Calarise Interiors brought our vision to life with a perfect balance of aesthetics and comfort."`,
+    author: "Vikram Nair",
+    rating: "★★★★★",
+    image: profilePic4,
   },
 ];
 
@@ -32,7 +35,7 @@ export default function TestimonialSection() {
 
   const handlePrev = () => {
     setCurrentIndex(
-      (prev) => (prev - 1 + testimonialData.length) % testimonialData.length
+      (prev) => (prev - 1 + testimonialData.length) % testimonialData.length,
     );
   };
 
@@ -53,10 +56,15 @@ export default function TestimonialSection() {
           <FaAngleLeft size={28} />
         </button>
         <div className="ts-card">
-          <img src={image} alt="Client" className="ts-image" />
-          <button className="ts-play">
+          <img src={profilePic1} alt="Client" className="ts-image" />
+
+          <Link
+            to={`/testimonial`}
+            className="ts-play"
+            onClick={(e) => e.stopPropagation()}
+          >
             <FaPlay />
-          </button>
+          </Link>
         </div>
         <div className="ts-text-area">
           <p className="ts-text">{text}</p>

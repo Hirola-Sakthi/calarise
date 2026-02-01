@@ -94,7 +94,7 @@
   }
   .floating-wrapper {
     position: fixed;
-    bottom: 35px;
+    bottom: 75px;
     right: 18px;
     z-index: 1000;
 }

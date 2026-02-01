@@ -11,7 +11,7 @@ import img2 from "../assets/images/home-slider-2.webp";
 import img3 from "../assets/images/home-slider-3.webp";
 import img4 from "../assets/images/home-slider-3.webp";
 import img5 from "../assets/images/home-slider-3.webp";
-import video1 from "../assets/images/home-slider-3.webp"; 
+import video1 from "../assets/images/calaris.mp4"; 
 import { FaImage, FaVideo } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 
@@ -30,7 +30,7 @@ export default function Portfolio() {
           pagination={{ clickable: true }}
           loop={true}
           autoplay={{
-            delay: 2500, // ✅ Auto scroll every 2.5s
+            delay: 2500, 
             disableOnInteraction: false,
           }}
           speed={800}
@@ -48,7 +48,6 @@ export default function Portfolio() {
           )}
         </Swiper>
 
-        {/* ✅ Image / Video Toggle */}
         <div className="media-buttons">
           <button onClick={() => setMode("image")} aria-label="Show Images">
             Images

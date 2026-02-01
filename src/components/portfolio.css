@@ -220,6 +220,7 @@
     width: 100vw;
     padding: 46px 0 80px;
     min-height: 65vh;
+    margin-top: -60px;
   }
   .portfolio-card {
     max-width: 95%;
