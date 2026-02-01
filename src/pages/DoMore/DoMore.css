@@ -175,12 +175,11 @@
 
 @media (max-width: 576px) {
   .refer-banner {
-    height: 75vh;
+    height: 65vh;
   }
   .refer-section {
     background: #101010;
     color: #fff;
-    width: 110vw;
   }
 
   .banner-title {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./DoMore.css";
 import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -21,63 +21,34 @@ export default function DoMore() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    emailjs
-      .send(
-        "service_uizmkco",
-        "template_08inae1",
-        {
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
-        "0Nu9qGlYuCwwT9Ywn",
-      )
+  try {
+    await axios.post("https://calarise.onrender.com/contact", formData);
 
-      .then(() => {
-        return emailjs.send(
-          "service_uizmkco",
-          "template_70ecmbb",
-          {
-            user_name: `${formData.firstName} ${formData.lastName}`,
-            user_email: formData.email,
-            title: "Contact Request",
-          },
-          "0Nu9qGlYuCwwT9Ywn",
-        );
-      })
+    toast.success("Message sent successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
 
-      .then(() => {
-        toast.success("Message sent successfully!", {
-          position: "top-right",
-          autoClose: 3000,
-        });
-
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      })
-
-      .catch((err) => {
-        console.error("EmailJS Error:", err);
-
-        toast.error("Failed to send message. Please try again.", {
-          position: "top-right",
-          autoClose: 3000,
-        });
-      })
-
-      .finally(() => setLoading(false));
-  };
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  } catch (error) {
+    toast.error("Failed to send message. Please try again.", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <>
       <NavbarComponent />
@@ -92,7 +63,7 @@ export default function DoMore() {
         <div class="refer-header">
           <h2 className="allura-font">Refer & Earn</h2>
           <p>
-            Ready to bring the allure of Alpha Modular Interiors to your circle?
+            Ready to bring the allure of Calaris Interiors to your circle?
             Let’s make interior dreams come true, together!
           </p>
         </div>
@@ -101,7 +72,7 @@ export default function DoMore() {
           <div class="step-card">
             <h4>SPREAD THE WORD</h4>
             <p>
-              Let your friends, family, and peers know about Alpha Modular
+              Let your friends, family, and peers know about Calaris
               Interiors.
             </p>
           </div>
@@ -110,14 +81,14 @@ export default function DoMore() {
 
           <div class="step-card">
             <h4>REFER FRIENDS/FAMILY</h4>
-            <p>Introduce them to the Alpha Modular Interiors magic!</p>
+            <p>Introduce them to the Calaris Interiors magic!</p>
           </div>
 
           <span class="arrow">→</span>
 
           <div class="step-card">
             <h4>REFERRAL CONFIRMS</h4>
-            <p>Your referral confirms with Alpha Modular Interiors.</p>
+            <p>Your referral confirms with Calaris Interiors.</p>
           </div>
 
           <span class="arrow">→</span>
