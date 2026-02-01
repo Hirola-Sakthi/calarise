@@ -301,3 +301,9 @@
     height: 110vh;
 }
 }
+
+@media (width: 344px) {
+.founder-section {
+    height: 105vh;
+}
+}
