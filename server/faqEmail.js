@@ -1,27 +1,35 @@
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
-const sendFaqMail = async ({ question }) => {
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.EMAIL_PASS,
-    },
-    family: 4,
-  });
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-  await transporter.sendMail({
-    from: `"FAQ Question" <${process.env.EMAIL}>`,
-    to: process.env.EMAIL,
-    subject: "New FAQ Question from Website",
-    html: `
-      <h3>New FAQ Question</h3>
-      <p><strong>Question:</strong></p>
-      <p>${question}</p>
-    `,
-  });
+const sendFaqMail = async ({ question, userEmail, userName }) => {
+  await Promise.all([
+    resend.emails.send({
+      from: "Calaris <onboarding@resend.dev>",
+      to: process.env.ADMIN_EMAIL,
+      subject: "New FAQ Question from Website",
+      html: `
+        <h3>New FAQ Question</h3>
+        <p><strong>Name:</strong> ${userName || "Anonymous"}</p>
+        <p><strong>Email:</strong> ${userEmail || "Not provided"}</p>
+        <p><strong>Question:</strong></p>
+        <p>${question}</p>
+      `,
+    }),
+
+    userEmail && resend.emails.send({
+      from: "Calaris <onboarding@resend.dev>",
+      to: userEmail,
+      subject: "Thank you for submitting your question",
+      html: `
+        Hi ${userName || "there"},<br/><br/>
+        Thank you for submitting your question!<br/>
+        We have received it and will get back to you shortly.<br/><br/>
+        Best Regards,<br/>
+        The Calaris Interiors Team
+      `,
+    }),
+  ]);
 };
 
 module.exports = sendFaqMail;

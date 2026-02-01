@@ -5,9 +5,9 @@ import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Testimonial1 from "../../assets/images/testimonial-img-1.webp";
 import Testimonial2 from "../../assets/images/testimonial-img-2.webp";
-
-
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const faqData = [
   {
@@ -26,7 +26,7 @@ const faqData = [
     q: " Do you provide customized designs?",
     a: "Absolutely. Every design is tailored to your lifestyle, preferences, space, and budget to ensure a unique and functional result.",
   },
-    {
+  {
     q: "Can I see design concepts before execution?",
     a: "Yes, we provide 3D renders and detailed drawings so you can visualize the space and suggest changes before execution begins.",
   },
@@ -35,7 +35,7 @@ const faqData = [
     a: "Yes, we assist with selecting materials, finishes, furniture, lighting, fabrics, and décor, ensuring quality, durability, and aesthetic appeal.",
   },
 
-      {
+  {
     q: "Do you offer turnkey interior solutions?",
     a: "Yes, we offer complete turnkey solutions where we handle everything—from design to execution—so you can enjoy a stress-free experience.",
   },
@@ -47,58 +47,101 @@ const faqData = [
 
 const FAQ = () => {
   const [open, setOpen] = useState(null);
+  const [faqQuestion, setFaqQuestion] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const sendFaqQuestion = async () => {
+    if (!faqQuestion.trim()) {
+      toast.warning("Please enter your question");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      await axios.post("https://calaris.onrender.com/contact/faq-email", {
+        question: faqQuestion,
+      });
+
+      toast.success("Thanks! Your question has been received.");
+      setFaqQuestion("");
+    } catch (error) {
+      console.error(error);
+      toast.error(error?.response?.data?.message || "Failed to send question");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
-    <NavbarComponent/>
-    <section className="faq-section">
-      <div className="faq-banner">
-        <div className="faq-overlay"></div>
-        <div className="banner-title">
-          <span className="allura-font">FAQ</span>
-        </div>
-      </div>
-      <div className="faq-container">
-        <div className="faq-row">
-          <div className="faq-left">
-            <h3>Have questions?</h3>
-            <p>
-              We’ve answered the most common ones to help <br />
-              you understand our products, services <br />
-              and process better.
-            </p>
-
-            <img src={Testimonial1} alt="Interior" />
+      <NavbarComponent />
+      <section className="faq-section">
+        <ToastContainer />
+        <div className="faq-banner">
+          <div className="faq-overlay"></div>
+          <div className="banner-title">
+            <span className="allura-font">FAQ</span>
           </div>
-          <div className="faq-right">
-            {faqData.map((item, index) => (
-              <div
-                key={index}
-                className={`faq-item glass ${open === index ? "active" : ""}`}
-              >
-                <div
-                  className="faq-question"
-                  onClick={() => setOpen(open === index ? null : index)}
-                >
-                  <span>{item.q}</span>
-                  <span className="icon">
-                    {open === index ? <FiMinus /> : <FiPlus />}
-                  </span>
-                </div>
+        </div>
+        <div className="faq-container">
+          <div className="faq-row">
+            <div className="faq-left">
+              <h3>Have questions?</h3>
+              <p>
+                We’ve answered the most common ones to help <br />
+                you understand our products, services and <br /> process better.
+              </p>
 
-                <div className="faq-answer">
-                  <p>{item.a}</p>
+              <img src={Testimonial1} alt="Interior" />
+            </div>
+            <div className="faq-right">
+              {faqData.map((item, index) => (
+                <div
+                  key={index}
+                  className={`faq-item glass ${open === index ? "active" : ""}`}
+                >
+                  <div
+                    className="faq-question"
+                    onClick={() => setOpen(open === index ? null : index)}
+                  >
+                    <span>{item.q}</span>
+                    <span className="icon">
+                      {open === index ? <FiMinus /> : <FiPlus />}
+                    </span>
+                  </div>
+
+                  <div className="faq-answer">
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              ))}
+              <div className="faq-reply-glass">
+                <div className="faq-input-wrapper">
+                  <input
+                    type="text"
+                    placeholder="Still have a question? Type here..."
+                    value={faqQuestion}
+                    onChange={(e) => setFaqQuestion(e.target.value)}
+                  />
+                  <button
+                    type="button"
+                    onClick={sendFaqQuestion}
+                    disabled={loading}
+                  >
+                    {" "}
+                    {loading ? "Sending..." : "Send"}
+                  </button>
                 </div>
               </div>
-            ))}
+            </div>
+          </div>
+          <div className="faq-bottom">
+            <img src={Testimonial2} alt="Living Room" />
           </div>
         </div>
-        <div className="faq-bottom">
-          <img src={Testimonial2} alt="Living Room" />
-        </div>
-      </div>
-    </section>
-    <Footer/>
+      </section>
+      <Footer />
     </>
   );
 };

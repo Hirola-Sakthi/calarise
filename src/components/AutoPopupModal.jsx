@@ -47,7 +47,7 @@ const AutoPopupModal = () => {
     setLoading(true);
 
     try {
-      await axios.post("https://calarise.onrender.com/contact", formData);
+      await axios.post("https://calaris.onrender.com/contact", formData);
 
       toast.success("Message sent successfully!", {
         position: "top-right",
