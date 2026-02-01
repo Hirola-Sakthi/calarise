@@ -59,7 +59,7 @@ const FAQ = () => {
     try {
       setLoading(true);
 
-      await axios.post("https://calaris.onrender.com/contact/faq-email", {
+      await axios.post("https://calaris.onrender.com/faq-email", {
         question: faqQuestion,
       });
 
