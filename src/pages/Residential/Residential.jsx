@@ -11,27 +11,36 @@ import imgLarge2 from "../../assets/images/residential-big-img.webp";
 
 export default function Residential() {
   const [activeTab, setActiveTab] = useState(0);
+
+  const [commercialIndex, setCommercialIndex] = useState(0);
+  const [turnkeyIndex, setTurnkeyIndex] = useState(0);
+
   const tabsRef = useRef(null);
   const livingRef = useRef(null);
   const bedroomRef = useRef(null);
   const kitchenRef = useRef(null);
   const designRef = useRef(null);
 
+  const commercialImages = [imgLarge2, imgSmall2, imgLarge2];
+  const turnkeyImages = [imgLarge2, imgSmall2, imgLarge2];
+
   const scrollToSection = (ref, index) => {
     setActiveTab(index);
     setTimeout(() => {
-      ref.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      ref.current?.scrollIntoView({ behavior: "smooth" });
     }, 80);
   };
 
   const scrollToTabs = () => {
-    tabsRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    tabsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const nextImage = (images, setIndex) => {
+    setIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = (images, setIndex) => {
+    setIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
@@ -40,7 +49,7 @@ export default function Residential() {
 
       <section className="residential-section">
         <div className="residential-banner">
-        <div className="about-page-overlay"></div>
+          <div className="about-page-overlay"></div>
           <div className="banner-title">
             <span className="allura-font">Services</span>
           </div>
@@ -78,11 +87,11 @@ export default function Residential() {
           <div className="res-row">
             <div className="res-images-wrap">
               <div className="res-images-small">
-                <img src={imgSmall1} alt="Residential small 1" />
-                <img src={imgSmall2} alt="Residential small 2" />
+                <img src={imgSmall1} alt="" />
+                <img src={imgSmall2} alt="" />
               </div>
               <div className="res-images-large">
-                <img src={imgLarge1} alt="Residential large" />
+                <img src={imgLarge1} alt="" />
               </div>
             </div>
 
@@ -160,15 +169,27 @@ export default function Residential() {
                 while creating an engaging and functional environment
               </p>
             </div>
-
             <div className="res-image-arrow">
-              <img src={imgLarge2} alt="Commercial design" />
+              <img src={commercialImages[commercialIndex]} alt="Commercial" />
+
               <div className="liquid-bg" />
+
               <div className="liquid-arrows">
-                <div className="liquid-arrow-btn left">
+                <div
+                  className="liquid-arrow-btn left"
+                  onClick={() =>
+                    prevImage(commercialImages, setCommercialIndex)
+                  }
+                >
                   <FiArrowLeft />
                 </div>
-                <div className="liquid-arrow-btn right">
+
+                <div
+                  className="liquid-arrow-btn right"
+                  onClick={() =>
+                    nextImage(commercialImages, setCommercialIndex)
+                  }
+                >
                   <FiArrowRight />
                 </div>
               </div>
@@ -179,11 +200,11 @@ export default function Residential() {
           <div className="res-row">
             <div className="res-images-wrap">
               <div className="res-images-small">
-                <img src={imgSmall1} alt="Renovation small 1" />
-                <img src={imgSmall2} alt="Renovation small 2" />
+                <img src={imgSmall1} alt="" />
+                <img src={imgSmall2} alt="" />
               </div>
               <div className="res-images-large">
-                <img src={imgLarge1} alt="Renovation large" />
+                <img src={imgLarge1} alt="" />
               </div>
             </div>
 
@@ -281,13 +302,22 @@ export default function Residential() {
             </div>
 
             <div className="res-image-arrow">
-              <img src={imgLarge2} alt="Turnkey project" />
+              <img src={turnkeyImages[turnkeyIndex]} alt="Turnkey" />
+
               <div className="liquid-bg" />
+
               <div className="liquid-arrows">
-                <div className="liquid-arrow-btn left">
+                <div
+                  className="liquid-arrow-btn left"
+                  onClick={() => prevImage(turnkeyImages, setTurnkeyIndex)}
+                >
                   <FiArrowLeft />
                 </div>
-                <div className="liquid-arrow-btn right">
+
+                <div
+                  className="liquid-arrow-btn right"
+                  onClick={() => nextImage(turnkeyImages, setTurnkeyIndex)}
+                >
                   <FiArrowRight />
                 </div>
               </div>

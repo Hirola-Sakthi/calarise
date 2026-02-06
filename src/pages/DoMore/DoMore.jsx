@@ -63,7 +63,7 @@ export default function DoMore() {
         <div class="refer-header">
           <h2 className="allura-font">Refer & Earn</h2>
           <p>
-            Ready to bring the allure of Calaris Interiors to your circle?
+            Ready to bring the allure of The Calaris Interiors to your circle?
             Let’s make interior dreams come true, together!
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function DoMore() {
           <div class="step-card">
             <h4>SPREAD THE WORD</h4>
             <p>
-              Let your friends, family, and peers know about Calaris
+              Let your friends, family, and peers know about The Calaris
               Interiors.
             </p>
           </div>
@@ -81,14 +81,14 @@ export default function DoMore() {
 
           <div class="step-card">
             <h4>REFER FRIENDS/FAMILY</h4>
-            <p>Introduce them to the Calaris Interiors magic!</p>
+            <p>Introduce them to The Calaris Interiors magic!</p>
           </div>
 
           <span class="arrow">→</span>
 
           <div class="step-card">
             <h4>REFERRAL CONFIRMS</h4>
-            <p>Your referral confirms with Calaris Interiors.</p>
+            <p>Your referral confirms with The Calaris Interiors.</p>
           </div>
 
           <span class="arrow">→</span>

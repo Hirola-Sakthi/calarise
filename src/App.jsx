@@ -15,6 +15,7 @@ import Testimonials from "./pages/Testimonials/Testimonials";
 import Blog from "./pages/Blog/Blog";
 import PageScrollToTop from "./pages/PageScrollToTop/PageScrollToTop";
 import BlogDetails from "./pages/Blog/BlogDetails";
+import BottomNav from "./components/BottomNav";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <BottomNav />
     </BrowserRouter>
   );
 }

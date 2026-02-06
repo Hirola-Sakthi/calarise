@@ -44,3 +44,7 @@ input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
+
+#founder {
+  scroll-margin-top: 700px;
+}

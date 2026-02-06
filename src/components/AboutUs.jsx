@@ -25,6 +25,7 @@ import Vector from "../assets/images/vector.png";
 
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineSupportAgent } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   const [assembled, setAssembled] = useState(true);
@@ -86,7 +87,7 @@ export default function AboutUs() {
       {
         threshold: 0,
         rootMargin: "0px 0px -80px 0px",
-      }
+      },
     );
 
     elements.forEach((el, index) => {
@@ -123,12 +124,12 @@ export default function AboutUs() {
             reflect who you are, how you live, and what inspires you.
           </p>
 
-          <button className="read-more">
+          <Link to="/about-us" className="read-more">
             Read More{" "}
             <span>
               <FaArrowRight />
             </span>
-          </button>
+          </Link>
 
           {/* PLANT IMAGE */}
           <div className="plant-image">
@@ -180,7 +181,7 @@ export default function AboutUs() {
 
               <button className="why-btn scroll-up">
                 <span className="icon">
-                 <FaCheckCircle />
+                  <FaCheckCircle />
                 </span>
                 <span className="text">Made with High-Quality Materials</span>
               </button>
@@ -194,7 +195,7 @@ export default function AboutUs() {
 
               <button className="why-btn scroll-up">
                 <span className="icon">
-                 <MdOutlineSupportAgent />
+                  <MdOutlineSupportAgent />
                 </span>
                 <span className="text">Timeless Design & Style Trends</span>
               </button>

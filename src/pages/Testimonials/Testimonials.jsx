@@ -2,6 +2,8 @@ import React from "react";
 import "./Testimonials.css";
 import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import profilePic from "../../assets/images/testimonial-common-dp-img.webp";
+
 
 const testimonialsData = [
   {
@@ -10,7 +12,7 @@ const testimonialsData = [
     review:
       "Calarise Interiors transformed our apartment beautifully. The design was elegant, functional, and perfectly aligned with our lifestyle. The team was extremely professional and transparent throughout.",
     rating: "★★★★★",
-    img: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=200&q=80",
+    img: profilePic,
   },
   {
     name: "Sneha Iyer",
@@ -18,7 +20,7 @@ const testimonialsData = [
     review:
       "From concept to execution, Calarise Interiors exceeded my expectations. The attention to detail and material quality truly reflect a premium interior brand.",
     rating: "★★★★★",
-    img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=200&q=80",
+    img: profilePic,
   },
   {
     name: "Rahul Mehta",
@@ -26,7 +28,7 @@ const testimonialsData = [
     review:
       "Our office interiors now feel modern, spacious, and inspiring. Calarise Interiors delivered on time and maintained excellent craftsmanship across every element.",
     rating: "★★★★★",
-    img: "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?auto=format&fit=crop&w=200&q=80",
+    img: profilePic,
   },
   {
     name: "Ananya Sharma",
@@ -34,7 +36,7 @@ const testimonialsData = [
     review:
       "What stood out was their design clarity and commitment. Calarise Interiors ensured everything was executed exactly as promised, without any last-minute surprises.",
     rating: "★★★★★",
-    img: "https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?auto=format&fit=crop&w=200&q=80",
+    img: profilePic,
   },
   {
     name: "Vikram Nair",
@@ -42,7 +44,7 @@ const testimonialsData = [
     review:
       "The interiors reflect warmth, elegance, and thoughtful planning. Calarise Interiors brought our vision to life with a perfect balance of aesthetics and comfort.",
     rating: "★★★★★",
-    img: "https://images.unsplash.com/photo-1610088441520-4352457e7095?auto=format&fit=crop&w=200&q=80",
+    img: profilePic,
   },
   {
     name: "Pooja Deshpande",
@@ -50,7 +52,7 @@ const testimonialsData = [
     review:
       "As a first-time homeowner, I was nervous, but Calarise Interiors made the entire process smooth and stress-free. The final outcome was simply stunning.",
     rating: "★★★★★",
-    img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=200&q=80",
+    img: profilePic,
   },
 ];
 

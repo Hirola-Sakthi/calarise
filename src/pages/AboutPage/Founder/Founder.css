@@ -59,6 +59,7 @@
   font-size: 42px;
   font-weight: 500;
   margin-bottom: 24px;
+  margin-top: 24px;
 }
 
 .our-founder-text p {
@@ -284,7 +285,7 @@
 
   .our-founder-card,
   .our-founder-card-second {
-    max-width: 100%;
+    max-width: 50%;
   }
 
   .our-founder-card img,
@@ -292,6 +293,7 @@
     height: 360px;
   }
 }
+
 
 @media (max-width: 576px) {
   .our-founder-section {
@@ -322,4 +324,9 @@
   .our-founder-underline {
     width: 120px;
   }
+  .our-founder-card, .our-founder-card-second{
+    max-width: 85%;
+  }
 }
+
+

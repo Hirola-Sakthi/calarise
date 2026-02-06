@@ -183,17 +183,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .difference-title {
-    font-size: 26px;
-  }
-
-  .difference-item p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-}
-
 @media (max-width: 768px) {
   .banner-title span {
     font-size: 28px;
@@ -201,6 +190,45 @@
   }
 
   .about-content-inner p {
-    font-size: 16px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 578px) {
+  .about-page-banner {
+    height: 65vh !important;
+  }
+  .banner-title {
+    position: absolute;
+    top: 97% !important;
+    left: 33% !important;
+    z-index: 2 !important;
+  }
+  .banner-title span {
+    font-size: 25px !important;
+  }
+  .our-founder-text p {
+    font-size: 12px !important;
+  }
+  .difference-item p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .difference-title {
+    font-size: 26px;
+  }
+
+  .difference-item p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 330px) {
+  .about-content-inner p {
+    font-size: 12px;
   }
 }

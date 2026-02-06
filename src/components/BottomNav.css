@@ -6,10 +6,11 @@
   height: 70px;
   background: #000;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
   z-index: 999;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-item {
@@ -21,18 +22,22 @@
   text-decoration: none;
 }
 
-.call-btn {
+.call-wrapper {
   position: absolute;
-  top: -28px;
-  width: 50px;
-  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.call-btn {
+  width: 55px;
+  height: 55px;
   background: #a68167;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  /* box-shadow: 0 10px 25px rgba(166,129,103,0.6); */
+  margin-top: -30px;
 }
 
 @media (min-width: 768px) {
