@@ -22,12 +22,24 @@ app.post("/contact", (req, res) => {
 
 const sendFaqMail = require("./faqEmail");
 
-app.post("/faq-email", (req, res) => {
-  const { question } = req.body;
-  if (!question) {
-    return res.status(400).json({ message: "Question is required" });
+app.post("/faq-email", async (req, res) => {
+  try {
+    const { question } = req.body;
+    if (!question || !question.trim()) {
+      return res.status(400).json({ message: "Question is required" });
+    }
+    await sendFaqMail({
+      question: question.trim(),
+    });
+    return res.status(200).json({
+      message: "Thanks! Your question has been received.",
+    });
+  } catch (error) {
+    console.error("FAQ Email Error:", error);
+    return res.status(500).json({
+      message: "Something went wrong. Please try again later.",
+    });
   }
-  res.status(200).json({ message: "Question received" });
 });
 
 const PORT = 5000;
