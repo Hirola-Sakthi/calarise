@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const sendMail = async ({ firstName, lastName, email, phone, message }) => {
   await Promise.all([
     resend.emails.send({
-      from: "Calaris <onboarding@resend.dev>",
+      from: "The Calaris <support@thecalaris.com>",
       to: process.env.ADMIN_EMAIL,
       subject: "New Contact Lead",
       html: `
@@ -18,7 +18,7 @@ const sendMail = async ({ firstName, lastName, email, phone, message }) => {
     }),
 
     resend.emails.send({
-      from: "Calaris <onboarding@resend.dev>",
+      from: "The Calaris <support@thecalaris.com>",
       to: email,
       subject: "Thank you for contacting The Calaris Interiors",
       html: `

@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const sendFaqMail = async ({ question, userEmail, userName }) => {
   await Promise.all([
     resend.emails.send({
-      from: "Calaris <onboarding@resend.dev>",
+      from: "The Calaris <support@thecalaris.com>",
       to: process.env.ADMIN_EMAIL,
       subject: "New FAQ Question from Website",
       html: `
