@@ -1,8 +1,6 @@
-/*  FLOATING PLUS MENU */
-
 .floating-wrapper {
   position: fixed;
-  bottom: 65px;
+  bottom: 100px;
   right: 30px;
   z-index: 1000;
 }

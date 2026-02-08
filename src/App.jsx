@@ -16,6 +16,8 @@ import Blog from "./pages/Blog/Blog";
 import PageScrollToTop from "./pages/PageScrollToTop/PageScrollToTop";
 import BlogDetails from "./pages/Blog/BlogDetails";
 import BottomNav from "./components/BottomNav";
+import LegalPage from "./pages/LegalPage/LegalPage";
+import Gallery from "./pages/Gallery/Gallery";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,6 +46,10 @@ function App() {
         <Route path="/testimonial" element={<Testimonials />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/privacy-policy" element={<LegalPage type="privacyPolicy" />} />
+        <Route path="/terms-of-use" element={<LegalPage type="termsAndConditions" />} />
+
 
 
         <Route path="*" element={<NotFound />} />

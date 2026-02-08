@@ -24,7 +24,7 @@ export default function Home() {
       <MeetFounder />
       <TestimonialSection />
       <Footer/>
-      <AutoPopupModal/>
+      {/* <AutoPopupModal/> */}
     </>
   );
 }

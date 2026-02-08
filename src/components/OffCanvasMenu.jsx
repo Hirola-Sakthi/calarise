@@ -23,7 +23,7 @@ export default function OffCanvasMenu({ open, onClose }) {
           <Link to="/" onClick={onClose}>Home</Link>
           <Link to="/about-us" onClick={onClose}>About</Link>
           <Link to="/services" onClick={onClose}>Services</Link>
-          <a href="#gallery" onClick={onClose}>Gallery</a>
+          <Link to="/gallery" onClick={onClose}>Gallery</Link>
           <Link to="/blog" onClick={onClose}>Blog</Link>
           <Link to="/testimonial" onClick={onClose}>Testimonial</Link>
           <Link to="/faq" onClick={onClose}>FAQ</Link>

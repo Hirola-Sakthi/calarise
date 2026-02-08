@@ -19,7 +19,6 @@ export default function NavbarComponent() {
   ];
 
   const moreRef = useRef(null);
-  // Close dropdowns if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (moreRef.current && !moreRef.current.contains(event.target)) {
@@ -49,9 +48,8 @@ export default function NavbarComponent() {
 
           <Link to="/services">Services</Link>
 
-          <a href="#gallery">Gallery</a>
+          <Link to="/gallery">Gallery</Link>
 
-          {/* MORE DROPDOWN */}
           <div ref={moreRef} style={{ position: "relative" }}>
             <div className="more-link" onClick={() => setMoreOpen(!moreOpen)}>
               More <FaChevronDown className="down-arrow" />

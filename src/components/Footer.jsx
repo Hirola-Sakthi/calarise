@@ -90,11 +90,8 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>© 2026 All Rights Reserved</p>
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Sales and Refunds</a>
-          <a href="#">Legal</a>
-          <a href="#">Site Map</a>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/terms-of-use">Terms & Conditions</Link>
         </div>
       </div>
     </footer>

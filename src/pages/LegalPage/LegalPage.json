@@ -1,0 +1,198 @@
+{
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "October 09, 2024",
+    "intro": [
+      "At The Calaris, we value your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit https://thecalaris.com/.",
+      "By using our Website, you agree to the collection and use of information in accordance with this policy."
+    ],
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "subSections": [
+          {
+            "title": "Personal Information",
+            "points": [
+              "Name",
+              "Email address",
+              "Phone number"
+            ]
+          },
+          {
+            "title": "Usage Information",
+            "description": "We automatically collect limited technical data such as:",
+            "points": [
+              "IP address",
+              "Browser type",
+              "Pages visited",
+              "Date and time of access"
+            ],
+            "note": "This information helps us improve website performance and user experience."
+          }
+        ]
+      },
+      {
+        "heading": "Cookies",
+        "content": "We use cookies to enhance functionality and analyze website traffic. You can control or disable cookies through your browser settings. Disabling cookies may affect certain features of the Website."
+      },
+      {
+        "heading": "How We Use Your Information",
+        "points": [
+          "Provide and improve our services",
+          "Respond to inquiries and requests",
+          "Communicate updates or relevant information",
+          "Maintain website security and functionality"
+        ]
+      },
+      {
+        "heading": "Sharing of Information",
+        "content": "We do not sell or rent your personal data.",
+        "points": [
+          "With trusted service providers",
+          "To comply with legal obligations",
+          "To protect our rights and users"
+        ]
+      },
+      {
+        "heading": "Data Security",
+        "content": "We implement reasonable security measures to protect your personal information. However, no online data transmission is completely secure."
+      },
+      {
+        "heading": "Children’s Privacy",
+        "content": "Our Website is not intended for children under 13. We do not knowingly collect personal data from children."
+      },
+      {
+        "heading": "External Links",
+        "content": "Our Website may contain links to third-party websites. We are not responsible for their content or privacy practices."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "content": "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date."
+      },
+      {
+        "heading": "Contact Us",
+        "contact": {
+          "email": "thecalaris.interiors@gmail.com",
+          "website": "https://thecalaris.com/"
+        }
+      }
+    ]
+  },
+
+  "termsAndConditions": {
+    "title": "Terms & Conditions",
+    "lastUpdated": "October 09, 2024",
+    "intro": [
+      "Welcome to The Calaris. By accessing or using our website https://thecalaris.com/, you agree to comply with and be bound by the following Terms & Conditions.",
+      "If you do not agree, please refrain from using our Website or services."
+    ],
+    "sections": [
+      {
+        "number": "1",
+        "heading": "About Us",
+        "content": "The Calaris provides interior design and execution services across India. All services are offered on a non-exclusive, project-based engagement."
+      },
+      {
+        "number": "2",
+        "heading": "Scope of Services",
+        "content": [
+          "The scope of services includes interior design, planning, and execution as mutually agreed with the client through proposals, estimates, drawings, or written communication.",
+          "Any additional or modified services will be charged separately upon client approval."
+        ]
+      },
+      {
+        "number": "3",
+        "heading": "Payments & Pricing",
+        "points": [
+          "Project estimates are indicative and may change based on design revisions, material selection, or site conditions.",
+          "Payments are milestone-based and communicated before project initiation.",
+          "All prices are exclusive of applicable taxes unless stated otherwise.",
+          "Advance payments once made are non-refundable unless explicitly agreed in writing."
+        ]
+      },
+      {
+        "number": "4",
+        "heading": "Project Timelines",
+        "content": "Design and execution timelines are approximate and may vary due to:",
+        "points": [
+          "Design iterations",
+          "Client approvals",
+          "Site readiness",
+          "Third-party or external dependencies"
+        ],
+        "note": "The Calaris is not responsible for delays caused by clients, builders, vendors, or force majeure events."
+      },
+      {
+        "number": "5",
+        "heading": "Client Responsibilities",
+        "content": "Clients agree to:",
+        "points": [
+          "Provide timely approvals, information, and site access",
+          "Ensure necessary permissions from builders or authorities",
+          "Make payments as per agreed milestones"
+        ],
+        "note": "Delays caused by the client may impact timelines and costs."
+      },
+      {
+        "number": "6",
+        "heading": "Warranty",
+        "points": [
+          "Lifetime warranty applies only to workmanship and materials supplied by The Calaris, subject to normal usage.",
+          "Warranty does not cover wear and tear, misuse, third-party products, or unauthorized modifications.",
+          "Electrical appliances and fittings are covered as per respective manufacturer warranties."
+        ]
+      },
+      {
+        "number": "7",
+        "heading": "Intellectual Property",
+        "content": "All designs, drawings, concepts, and visual content created by The Calaris remain its intellectual property unless otherwise agreed in writing. Clients may use designs only for the executed project and must not reproduce or distribute them commercially."
+      },
+      {
+        "number": "8",
+        "heading": "Use of Images & Portfolio",
+        "content": "The Calaris reserves the right to photograph completed projects and use them for marketing, portfolio, and promotional purposes. Client identity details will remain confidential unless permitted."
+      },
+      {
+        "number": "9",
+        "heading": "Limitation of Liability",
+        "points": [
+          "Indirect or consequential damages",
+          "Delays caused by third parties",
+          "Structural, electrical, plumbing, or civil issues outside agreed scope"
+        ],
+        "note": "Maximum liability, if any, shall not exceed the amount paid by the client for the services."
+      },
+      {
+        "number": "10",
+        "heading": "Confidentiality",
+        "content": "Both parties agree to maintain confidentiality of sensitive project, pricing, and personal information shared during the engagement."
+      },
+      {
+        "number": "11",
+        "heading": "Termination",
+        "content": "Either party may terminate services in writing. Payments made until the termination date remain payable and non-refundable unless otherwise agreed."
+      },
+      {
+        "number": "12",
+        "heading": "Governing Law & Jurisdiction",
+        "content": [
+          "These Terms are governed by the laws of India.",
+          "All disputes shall be subject to the exclusive jurisdiction of courts in Bangalore, Karnataka."
+        ]
+      },
+      {
+        "number": "13",
+        "heading": "Changes to Terms",
+        "content": "The Calaris may update these Terms & Conditions at any time. Continued use of the Website implies acceptance of updated terms."
+      },
+      {
+        "number": "14",
+        "heading": "Contact Information",
+        "contact": {
+          "email": "thecalaris.interiors@gmail.com",
+          "website": "https://thecalaris.com/"
+        }
+      }
+    ]
+  }
+}
