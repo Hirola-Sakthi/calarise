@@ -14,6 +14,8 @@ export default function Residential() {
 
   const [commercialIndex, setCommercialIndex] = useState(0);
   const [turnkeyIndex, setTurnkeyIndex] = useState(0);
+  const [residentialIndex, setResidentialIndex] = useState(0);
+  const [renovationIndex, setRenovationIndex] = useState(0);
 
   const tabsRef = useRef(null);
   const livingRef = useRef(null);
@@ -23,6 +25,8 @@ export default function Residential() {
 
   const commercialImages = [imgLarge2, imgSmall2, imgLarge2];
   const turnkeyImages = [imgLarge2, imgSmall2, imgLarge2];
+  const residentialImages = [imgLarge2, imgSmall2, imgLarge2];
+  const renovationImages = [imgLarge2, imgSmall2, imgLarge2];
 
   const scrollToSection = (ref, index) => {
     setActiveTab(index);
@@ -85,13 +89,29 @@ export default function Residential() {
         </div>
         <div ref={livingRef} className="residential-content">
           <div className="res-row">
-            <div className="res-images-wrap">
-              <div className="res-images-small">
-                <img src={imgSmall1} alt="" />
-                <img src={imgSmall2} alt="" />
-              </div>
-              <div className="res-images-large">
-                <img src={imgLarge1} alt="" />
+            <div className="res-image-arrow">
+              <img src={residentialImages[residentialIndex]} alt="Commercial" />
+
+              <div className="liquid-bg" />
+
+              <div className="liquid-arrows">
+                <div
+                  className="liquid-arrow-btn left"
+                  onClick={() =>
+                    prevImage(residentialImages, setResidentialIndex)
+                  }
+                >
+                  <FiArrowLeft />
+                </div>
+
+                <div
+                  className="liquid-arrow-btn right"
+                  onClick={() =>
+                    nextImage(residentialImages, setResidentialIndex)
+                  }
+                >
+                  <FiArrowRight />
+                </div>
               </div>
             </div>
 
@@ -198,13 +218,29 @@ export default function Residential() {
         </div>
         <div ref={kitchenRef} className="residential-content">
           <div className="res-row">
-            <div className="res-images-wrap">
-              <div className="res-images-small">
-                <img src={imgSmall1} alt="" />
-                <img src={imgSmall2} alt="" />
-              </div>
-              <div className="res-images-large">
-                <img src={imgLarge1} alt="" />
+            <div className="res-image-arrow">
+              <img src={renovationImages[renovationIndex]} alt="Commercial" />
+
+              <div className="liquid-bg" />
+
+              <div className="liquid-arrows">
+                <div
+                  className="liquid-arrow-btn left"
+                  onClick={() =>
+                    prevImage(renovationImages, setRenovationIndex)
+                  }
+                >
+                  <FiArrowLeft />
+                </div>
+
+                <div
+                  className="liquid-arrow-btn right"
+                  onClick={() =>
+                    nextImage(renovationImages, setRenovationIndex)
+                  }
+                >
+                  <FiArrowRight />
+                </div>
               </div>
             </div>
 

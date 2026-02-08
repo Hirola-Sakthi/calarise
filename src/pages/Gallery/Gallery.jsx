@@ -9,6 +9,7 @@ import imgSmall3 from "../../assets/images/calaris-gallery-image-3.webp";
 import imgSmall4 from "../../assets/images/calaris-gallery-image-4.webp";
 import imgSmall5 from "../../assets/images/calaris-gallery-image-5.webp";
 import imgSmall6 from "../../assets/images/calaris-gallery-image-6.webp";
+import galleryVideo from "../../assets/images/calaris.mp4";
 import { FiYoutube } from "react-icons/fi";
 
 const Gallery = () => {
@@ -137,7 +138,7 @@ const Gallery = () => {
               ) : (
                 <video
                   className="gallery-video-player"
-                  src="../../assets/images/calaris.mp4"
+                  src={galleryVideo}
                   controls
                   autoPlay
                 />
@@ -187,7 +188,7 @@ const Gallery = () => {
               ) : (
                 <video
                   className="gallery-video-player"
-                  src="../../assets/images/calaris.mp4"
+                  src={galleryVideo}
                   controls
                   autoPlay
                 />

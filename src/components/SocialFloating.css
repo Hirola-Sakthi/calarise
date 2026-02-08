@@ -24,7 +24,7 @@
 }
 
 .floating-btn.active {
-  background: #a68167; 
+  background: #a68167;
   border: none;
 }
 
@@ -68,7 +68,6 @@
   outline: none;
 }
 
-
 @keyframes bounceIn {
   0% {
     transform: translateY(20px) scale(0.8);
@@ -83,9 +82,14 @@
   }
 }
 
+@media (width: 768px) {
+  .floating-wrapper {
+    bottom: 60px;
+  }
+}
 
-@media(max-width:578px){
-  .floating-btn{
+@media (max-width: 578px) {
+  .floating-btn {
     width: 50px;
     height: 50px;
     font-size: 10px;
@@ -95,5 +99,5 @@
     bottom: 75px;
     right: 18px;
     z-index: 1000;
-}
+  }
 }

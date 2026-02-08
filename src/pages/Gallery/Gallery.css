@@ -251,6 +251,13 @@
     grid-column: span 2;
     height: 320px;
   }
+  .liquid-tabs-wrap{
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+  .gallery-grid-wrapper{
+    margin: 60px auto 50px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -268,5 +275,22 @@
   .banner-title span {
     padding: 10px 30px;
     font-size: 28px;
+  }
+  .video-btn{
+    padding: 5px 15px;
+    font-size: 15px;
+    gap: 15px;
+  }
+  .gallery-icon-wrapper{
+     width: 30px;
+    height: 30px;
+
+  }
+  .liquid-tab {
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+  .gallery-banner{
+    height: 65vh;
   }
 }
