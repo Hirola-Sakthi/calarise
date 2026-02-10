@@ -3,6 +3,7 @@ import "./AutoPopupModal.css";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 const AutoPopupModal = () => {
   const [show, setShow] = useState(false);
@@ -131,9 +132,22 @@ const AutoPopupModal = () => {
             rows="4"
           ></textarea>
 
-          <button type="submit" disabled={loading} className="popup-submit">
-            {loading ? "Sending..." : "Submit"}
-          </button>
+          <div className="popup-actions">
+            <button type="submit" disabled={loading} className="popup-submit">
+              {loading ? "Sending..." : "Submit"}
+            </button>
+
+            <button
+              type="button"
+              className="popup-whatsapp"
+              onClick={() =>
+                window.open("https://wa.me/919845921706", "_blank")
+              }
+            >
+              <FaWhatsapp size={18} />
+              WhatsApp
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -30,9 +30,9 @@ const BlogDetails = () => {
       <section className="blog-section">
         <div className="blog-banner">
           <div className="blog-overlay"></div>
-          <div className="banner-title">
+          {/* <div className="banner-title">
             <span className="allura-font">{blog.title}</span>
-          </div>
+          </div> */}
         </div>
         <div className="blog-list">
           <div className="blog-container blog-details-content">
