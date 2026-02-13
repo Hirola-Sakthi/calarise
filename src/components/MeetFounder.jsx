@@ -1,21 +1,25 @@
 import React from "react";
 import "./MeetFounder.css";
 
-import FounderImg from "../assets/images/meet-our-founder.webp"; // your left side image
+import FounderImg from "../assets/images/meet-our-founder.webp";
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import BgLine from "../assets/images/home-slider-1.webp";
 
 export default function MeetFounder() {
+  const navigate = useNavigate();
+
+  const goToFounder = () => {
+    navigate("/about-us", {
+      state: { scrollTo: "founder" },
+    });
+  };
   return (
     <section className="founder-section">
       <div className="founder-container">
-        {/* LEFT COLUMN */}
         <div className="founder-image-box">
           <img src={FounderImg} alt="Founder" className="founder-image" />
         </div>
-
-        {/* RIGHT COLUMN */}
         <div className="founder-content">
           <h2 className="founder-title allura-font">Meet Our Founder</h2>
 
@@ -33,12 +37,12 @@ export default function MeetFounder() {
             on design and brand storytelling.
           </p>
 
-          <Link to="/about-us#founder" className="founder-btn">
+          <button className="founder-btn" onClick={goToFounder}>
             Read More
             <span className="icon-wrapper">
               <FaArrowRight />
             </span>
-          </Link>
+          </button>
         </div>
       </div>
     </section>

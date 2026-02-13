@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./AboutPage.css";
 import NavbarComponent from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ServicesSection from "../../components/ServicesSection";
 import Founder from "./Founder/Founder";
 import VisionSection from "./VisionSection/VisionSection";
+import { useLocation } from "react-router-dom";
 
 const AboutPage = () => {
+  const founderRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "founder") {
+      founderRef.current?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, [location]);
+
   return (
     <>
       <NavbarComponent />
@@ -56,8 +68,10 @@ const AboutPage = () => {
           </div>
         </div>
         <ServicesSection />
-        <Founder/>
-        <VisionSection/>
+        <div ref={founderRef}>
+          <Founder />
+        </div>
+        <VisionSection />
         {/* What Makes Us Different */}
         <div className="difference-section">
           <div className="difference-container">

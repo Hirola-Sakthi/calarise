@@ -34,7 +34,7 @@ const Founder = () => {
 
   return (
     <section
-      className="our-founder-section" id="founder"
+      className="our-founder-section"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="our-founder-container">
@@ -42,7 +42,7 @@ const Founder = () => {
           <h2>Founders</h2>
         </div>
         <div className="our-founder-row">
-          <div className="our-founder-text slide-left" ref={contentLeftRef}>
+          <div className="our-founder-text slide-left our-founder-main-name" ref={contentLeftRef}>
             <h3>Rakesh</h3>
             <p>
               With years of experience in the world of interior design, Rakesh

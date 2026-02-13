@@ -10,10 +10,12 @@ import img1 from "../assets/images/home-slider-1.webp";
 import img2 from "../assets/images/home-slider-2.webp";
 import img3 from "../assets/images/home-slider-3.webp";
 import img4 from "../assets/images/home-slider-4.webp";
+import { useNavigate } from "react-router-dom";
 // import img5 from "../assets/images/home-slider-1.webp";
 // import img6 from "../assets/images/home-slider-2.webp";
 
 export default function ServicesSection() {
+  const navigate = useNavigate();
   const items = [
     { img: img1, title: "Residential" },
     { img: img2, title: "Commercial" },
@@ -23,39 +25,52 @@ export default function ServicesSection() {
     { img: img2, title: "Commercial" },
   ];
 
+  const tabMap = {
+    Residential: 0,
+    Commercial: 1,
+    "Trun Key": 2,
+    Renovation: 3,
+  };
+
+  const handleClick = (title) => {
+    navigate("/gallery", {
+      state: { tabIndex: tabMap[title] },
+    });
+  };
+
   return (
-   <section className="services-section">
-  <div className="container">
-    <h2 className="services-title allura-font">The Calaris Services</h2>
-  </div>
-
-  {/* Swiper outside container → full width */}
-  <div className="services-swiper-wrap">
-  <Swiper
-    slidesPerView={3}
-    spaceBetween={30}
-    pagination={{ clickable: true }}
-    autoplay={{ delay: 2500 }}
-    modules={[Pagination, Autoplay]}
-    className="services-swiper"
-    breakpoints={{
-      0: { slidesPerView: 1, spaceBetween: 15 },
-      768: { slidesPerView: 2, spaceBetween: 20 },
-      992: { slidesPerView: 3, spaceBetween: 30 },
-    }}
-  >
-    {items.map((item, index) => (
-      <SwiperSlide key={index}>
-        <div className="service-card">
-          <img src={item.img} className="service-img" alt={item.title} />
-          <div className="service-title">{item.title}</div>
-        </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
-
-</section>
-
+    <section className="services-section">
+      <div className="container">
+        <h2 className="services-title allura-font">The Calaris Services</h2>
+      </div>
+      <div className="services-swiper-wrap">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2500 }}
+          modules={[Pagination, Autoplay]}
+          className="services-swiper"
+          breakpoints={{
+            0: { slidesPerView: 1, spaceBetween: 15 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            992: { slidesPerView: 3, spaceBetween: 30 },
+          }}
+        >
+          {items.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="service-card"
+                onClick={() => handleClick(item.title)}
+                style={{ cursor: "pointer" }}
+              >
+                <img src={item.img} className="service-img" alt={item.title} />
+                <div className="service-title">{item.title}</div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
   );
 }
